@@ -1,0 +1,7 @@
+{
+  "name": "Shadow Infratech Pvt Ltd",
+  "description": "Premium NA Plots in Pune for Investment & Living. High-end real estate development featuring a soft, muted blue and grey aesthetic.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
