@@ -6,6 +6,7 @@ import { About } from './components/About';
 import { Keypoints, Statistics } from './components/Keypoints';
 import { ProjectsCarousel } from './components/ProjectsCarousel';
 import { Gallery } from './components/Gallery';
+import { GoogleReviews } from './components/GoogleReviews';
 import { Founders } from './components/Founders';
 import { Testimonials } from './components/Testimonials';
 import { EnquiryForm } from './components/EnquiryForm';
@@ -34,6 +35,7 @@ const App: React.FC = () => {
         <Keypoints />
         <ProjectsCarousel />
         <Gallery />
+        <GoogleReviews />
         <Founders />
         <Testimonials />
         <EnquiryForm />

@@ -8,36 +8,42 @@ export const LocationSection: React.FC = () => {
       <div className="max-w-7xl mx-auto space-y-12">
         <div className="text-center space-y-4">
           <h2 className="text-sm uppercase tracking-widest text-pleo-blue-dark font-bold">Location</h2>
-          <h3 className="text-4xl font-serif text-pleo-text">Find Us On The Map</h3>
+          <h3 className="text-4xl font-serif text-pleo-text animate-slide-text">Find Us On The Map</h3>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 h-[500px]">
-          {/* Map Placeholder */}
-          <div className="rounded-[2rem] overflow-hidden bg-pleo-grey border border-pleo-blue/20 relative">
-            <div className="absolute inset-0 flex items-center justify-center flex-col space-y-4">
-              <div className="w-12 h-12 bg-pleo-blue rounded-full animate-bounce" />
-              <p className="text-pleo-text/40 font-medium">Interactive Map View</p>
-            </div>
-            {/* Real Map would go here */}
-            <div className="w-full h-full bg-[#E5E7EB] opacity-50 grayscale" />
-          </div>
-
-          {/* Video Placeholder */}
-          <div className="rounded-[2rem] overflow-hidden bg-pleo-text border border-pleo-blue/20 relative group cursor-pointer">
-            <img 
-              src="https://picsum.photos/seed/drone/800/600" 
-              className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" 
-              alt="Aerial View"
+        <div className="flex justify-center">
+          {/* Embedded Google Map */}
+          <div className="rounded-[2rem] overflow-hidden bg-pleo-grey border border-pleo-blue/20 w-full max-w-4xl h-[500px]">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d483237.9966690133!2d73.23959945625005!3d18.873907630476776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c7002731f681%3A0x46f4fea55ee700df!2sShadow%20Infratech%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1769064444978!5m2!1sen!2sin" 
+              width="100%" 
+              height="100%" 
+              style={{border: 0}} 
+              allowFullScreen 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
             />
-            <div className="absolute inset-0 flex items-center justify-center flex-col space-y-4">
-              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm border border-white/50 rounded-full flex items-center justify-center group-hover:bg-pleo-blue group-hover:scale-110 transition-all duration-300">
-                <Play className="fill-white text-white ml-1" size={32} />
-              </div>
-              <p className="text-white font-medium uppercase tracking-widest text-sm">Experience The View</p>
-            </div>
           </div>
         </div>
       </div>
     </section>
   );
 };
+
+<style jsx>{`
+  @keyframes slide-text {
+    0% {
+      transform: translateX(-50px);
+    }
+    50% {
+      transform: translateX(50px);
+    }
+    100% {
+      transform: translateX(-50px);
+    }
+  }
+  
+  .animate-slide-text {
+    animation: slide-text 3s ease-in-out infinite;
+  }
+`}</style>
