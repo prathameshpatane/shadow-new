@@ -159,7 +159,7 @@ export const About: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           <div className="rounded-[3rem] overflow-hidden shadow-2xl animate-slide-up animation-delay-400 hover:shadow-3xl hover:border-4 hover:border-pleo-blue transition-all duration-500">
             <img
-              src="/map.png"
+              src="/mapnew.png"
               alt="Location Map"
               className="w-full h-auto hover:scale-105 transition-transform duration-1000"
             />
