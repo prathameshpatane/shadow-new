@@ -46,7 +46,7 @@ export const About: React.FC = () => {
         <div className="relative space-y-8 scroll-reveal opacity-0 translate-x-12 transition-all duration-700 ease-out [&.is-visible]:opacity-100 [&.is-visible]:translate-x-0">
 
           {/* Background Number */}
-          <span className="absolute -top-12 -left-6 text-[12rem] md:text-[16rem] font-serif font-bold text-pleo-blue opacity-10 leading-none select-none pointer-events-none -z-10">
+          <span className="absolute -top-12 -left-6 text-[12rem] md:text-[16rem] font-serif font-bold text-pleo-blue opacity-20 leading-none select-none pointer-events-none -z-10">
             24
           </span>
 

@@ -4,20 +4,24 @@ import React from 'react';
 export const Hero: React.FC = () => {
   return (
     <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-      {/* Background Image with Zoom Animation */}
+      {/* Background Video with Zoom Animation */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
-        <img 
-          src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2000&auto=format&fit=crop" 
-          alt="Premium Land Plot" 
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
           className="w-full h-full object-cover animate-zoom-bg"
-        />
+        >
+          <source src="/bg.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-black/45 backdrop-blur-[0.5px]" />
       </div>
 
       <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
         <div className="space-y-6">
           <span className="inline-block text-sm uppercase tracking-[0.5em] text-pleo-blue mb-4 font-bold animate-fade-in-down opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-            HOME PAGE
+            BUILDING
           </span>
           
           <h1 className="text-5xl md:text-8xl lg:text-9xl font-serif text-white leading-tight font-bold animate-fade-in-up opacity-0" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
