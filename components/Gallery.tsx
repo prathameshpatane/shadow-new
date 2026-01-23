@@ -4,7 +4,7 @@ import React from 'react';
 const galleryImages = [
   { url: "/gulmohar_vikas.png", title: "Gulmohar Vikas", size: "col-span-2" },
   { url: "/citrine_city.png", title: "Citrine City", size: "col-span-1" },
-  { url: "/solvista.png", title: "Solvista", size: "col-span-1" },
+  { url: "/sol.jpg", title: "Solvista", size: "col-span-1" },
   { url: "/suraksha_enclave.png", title: "Suraksha Enclave", size: "col-span-2" },
 ];
 
