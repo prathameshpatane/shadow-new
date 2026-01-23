@@ -87,13 +87,11 @@ export const About: React.FC = () => {
 
         {/* HEADINGS WITH 24 */}
         <div className="relative text-center space-y-4">
-
-          {/* Background 24 */}
           <span className="absolute inset-0 flex items-center justify-center
             text-[10rem] md:text-[14rem]
             font-serif font-bold
             text-pleo-blue
-            opacity-21
+            opacity-20
             select-none pointer-events-none
             -z-10">
             24
@@ -145,25 +143,29 @@ export const About: React.FC = () => {
         </div>
       </div>
 
-      {/* GLOBAL PRESENCE */}
-      <div className="max-w-7xl mx-auto mt-24 text-center space-y-8">
-        <div className="space-y-4">
-          <h2 className="text-sm uppercase tracking-widest text-pleo-blue-dark font-bold animate-slide-text">
-            Global Reach
-          </h2>
-          <h3 className="text-4xl font-serif text-pleo-text animate-slide-text animation-delay-200">
-            Our Global Presence
-          </h3>
-        </div>
+      {/* GLOBAL PRESENCE WITH BACKGROUND */}
+      <div className="mt-24 bg-blue-100 py-10">
+        <div className="max-w-7xl mx-auto text-center space-y-8">
 
-        <div className="max-w-4xl mx-auto">
-          <div className="rounded-[3rem] overflow-hidden shadow-2xl animate-slide-up animation-delay-400 hover:shadow-3xl hover:border-4 hover:border-pleo-blue transition-all duration-500">
-            <img
-              src="/mapnew.png"
-              alt="Location Map"
-              className="w-full h-auto hover:scale-105 transition-transform duration-1000"
-            />
+          <div className="space-y-4">
+            <h2 className="text-sm uppercase tracking-widest text-pleo-blue-dark font-bold animate-slide-text">
+              Global Reach
+            </h2>
+            <h3 className="text-4xl font-serif text-pleo-text animate-slide-text animation-delay-200">
+              Our Global Presence
+            </h3>
           </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="rounded-[3rem] overflow-hidden shadow-2xl animate-slide-up animation-delay-400 hover:shadow-3xl hover:border-4 hover:border-pleo-blue transition-all duration-500 bg-white">
+              <img
+                src="/mapnew.png"
+                alt="Location Map"
+                className="w-full h-auto hover:scale-105 transition-transform duration-1000"
+              />
+            </div>
+          </div>
+
         </div>
       </div>
 

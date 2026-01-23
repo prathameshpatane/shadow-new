@@ -3,7 +3,7 @@ import React from 'react';
 
 export const EnquiryForm: React.FC = () => {
   return (
-    <section id="contact" className="py-24 px-6 bg-pleo-blue/40">
+    <section id="contact" className="py-24 px-6 bg-indigo-400">
       <div className="max-w-7xl mx-auto">
         <div className="bg-white rounded-[3rem] shadow-2xl overflow-hidden flex flex-col lg:flex-row">
           <div className="lg:w-1/2 p-12 md:p-20 bg-pleo-blue flex flex-col justify-center space-y-8">

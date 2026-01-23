@@ -63,10 +63,16 @@ export const Keypoints: React.FC = () => {
   }, []);
 
   return (
-    <section id="why-shadow" className="py-24 bg-pleo-accent/40 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section
+      id="why-shadow"
+      className="relative py-24 px-6 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/pic.png')" }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <style>{`
-          /* Reveal Animation */
           .keypoint-box {
             transform: translateY(40px) scale(0.96);
             transition: transform 0.7s ease, box-shadow 0.4s ease;
@@ -76,7 +82,6 @@ export const Keypoints: React.FC = () => {
             transform: translateY(0) scale(1);
           }
 
-          /* Hover Bounce Animation */
           @keyframes hoverBounce {
             0% { transform: translateY(0) scale(1); }
             30% { transform: translateY(-10px) scale(1.02); }
@@ -88,7 +93,6 @@ export const Keypoints: React.FC = () => {
             animation: hoverBounce 0.6s ease;
           }
 
-          /* Title Pulse */
           @keyframes zoomPulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
@@ -101,10 +105,10 @@ export const Keypoints: React.FC = () => {
 
         {/* Heading */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-sm uppercase tracking-[0.4em] text-pleo-blue-dark font-bold">
+          <h2 className="text-sm uppercase tracking-[0.4em] text-white font-bold">
             The Distinction
           </h2>
-          <h3 className="text-4xl md:text-6xl font-serif text-pleo-text zoom-pulse hover:text-blue-400 transition-colors duration-300 cursor-pointer">
+          <h3 className="text-4xl md:text-6xl font-serif text-white zoom-pulse hover:text-blue-300 transition-colors duration-300 cursor-pointer">
             Our Core Qualities
           </h3>
         </div>
@@ -114,7 +118,7 @@ export const Keypoints: React.FC = () => {
           {whyPoints.map((point, i) => (
             <div
               key={i}
-              className="keypoint-box group p-12 rounded-[3rem] bg-orange-100 border-2 border-pleo-blue shadow-sm hover:shadow-2xl transition-all duration-500"
+              className="keypoint-box group p-12 rounded-[3rem] bg-orange-100/90 backdrop-blur-md border-2 border-pleo-blue shadow-sm hover:shadow-2xl transition-all duration-500"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               <div className="w-20 h-20 bg-pleo-blue-light rounded-3xl flex items-center justify-center mb-8 text-pleo-blue-dark group-hover:bg-pleo-blue transition-all duration-500">
@@ -125,7 +129,7 @@ export const Keypoints: React.FC = () => {
                 {point.title}
               </h4>
 
-              <p className="text-pleo-text/100 text-lg leading-relaxed">
+              <p className="text-pleo-text text-lg leading-relaxed">
                 {point.desc}
               </p>
 
@@ -190,58 +194,17 @@ export const Statistics: React.FC = () => {
         <div className="overflow-hidden">
           <div className="scroll-container">
             <div className="flex gap-20">
-              <StatCard
-                value="4 Lakhs+"
-                title="SQ. FT. Sold"
-                desc="We have successfully sold upto 4lakhs plus SQ. Ft. land till date."
-                color="text-yellow-400"
-              />
-              <StatCard
-                value="₹ 300 Cr."
-                title="Project Costs Completed"
-                desc="Shadow Infratech has achieved a remarkable turnover of over ₹300 crore through excellence, strategic execution, and customer trust."
-                color="text-green-400"
-              />
-              <StatCard
-                value="25%"
-                title="ROI Every Year on Each Project"
-                desc="Shadow Infratech consistently delivers an impressive 25% ROI annually on each project."
-                color="text-blue-400"
-              />
-              <StatCard
-                value="₹ 250 Cr."
-                title="Project Ongoing"
-                desc="Shadow Infratech is currently managing ₹250 crore worth of ongoing projects."
-                color="text-purple-400"
-              />
+              <StatCard value="4 Lakhs+" title="SQ. FT. Sold" desc="We have successfully sold upto 4lakhs plus SQ. Ft. land till date." color="text-yellow-400" />
+              <StatCard value="₹ 300 Cr." title="Project Costs Completed" desc="Shadow Infratech has achieved a remarkable turnover of over ₹300 crore through excellence, strategic execution, and customer trust." color="text-green-400" />
+              <StatCard value="25%" title="ROI Every Year on Each Project" desc="Shadow Infratech consistently delivers an impressive 25% ROI annually on each project." color="text-blue-400" />
+              <StatCard value="₹ 250 Cr." title="Project Ongoing" desc="Shadow Infratech is currently managing ₹250 crore worth of ongoing projects." color="text-purple-400" />
             </div>
 
-            {/* Duplicate for smooth loop */}
             <div className="flex gap-20">
-              <StatCard
-                value="4 Lakhs+"
-                title="SQ. FT. Sold"
-                desc="We have successfully sold upto 4lakhs plus SQ. Ft. land till date."
-                color="text-yellow-400"
-              />
-              <StatCard
-                value="₹ 300 Cr."
-                title="Project Costs Completed"
-                desc="Shadow Infratech has achieved a remarkable turnover of over ₹300 crore through excellence, strategic execution, and customer trust."
-                color="text-green-400"
-              />
-              <StatCard
-                value="25%"
-                title="ROI Every Year on Each Project"
-                desc="Shadow Infratech consistently delivers an impressive 25% ROI annually on each project."
-                color="text-blue-400"
-              />
-              <StatCard
-                value="₹ 250 Cr."
-                title="Project Ongoing"
-                desc="Shadow Infratech is currently managing ₹250 crore worth of ongoing projects."
-                color="text-purple-400"
-              />
+              <StatCard value="4 Lakhs+" title="SQ. FT. Sold" desc="We have successfully sold upto 4lakhs plus SQ. Ft. land till date." color="text-yellow-400" />
+              <StatCard value="₹ 300 Cr." title="Project Costs Completed" desc="Shadow Infratech has achieved a remarkable turnover of over ₹300 crore through excellence, strategic execution, and customer trust." color="text-green-400" />
+              <StatCard value="25%" title="ROI Every Year on Each Project" desc="Shadow Infratech consistently delivers an impressive 25% ROI annually on each project." color="text-blue-400" />
+              <StatCard value="₹ 250 Cr." title="Project Ongoing" desc="Shadow Infratech is currently managing ₹250 crore worth of ongoing projects." color="text-purple-400" />
             </div>
           </div>
         </div>

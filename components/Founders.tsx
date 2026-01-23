@@ -12,11 +12,11 @@ const loopImages = [...leadershipImages, ...leadershipImages];
 
 export const Founders: React.FC = () => {
   return (
-    <section id="founders" className="py-24 bg-pleo-grey/100 overflow-hidden">
+    <section id="founders" className="py-24 bg-gray-400 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="flex flex-col items-center text-center mb-20 space-y-4">
-          <h2 className="text-sm uppercase tracking-[0.4em] text-pleo-blue-dark font-bold">
+          <h2 className="text-2xl uppercase tracking-[0.4em] text-blue-700 font-bold">
             Partners
           </h2>
           <h3 className="text-4xl md:text-6xl font-serif text-pleo-text">
