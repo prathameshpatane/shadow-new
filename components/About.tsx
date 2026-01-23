@@ -144,7 +144,7 @@ export const About: React.FC = () => {
       </div>
 
       {/* GLOBAL PRESENCE WITH BACKGROUND */}
-      <div className="mt-24 bg-blue-100 py-10">
+      <div className="mt-24 bg-gray-200 py-10">
         <div className="max-w-7xl mx-auto text-center space-y-8">
 
           <div className="space-y-4">
