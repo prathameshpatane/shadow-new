@@ -12,7 +12,7 @@ import { Testimonials } from './components/Testimonials';
 import { EnquiryForm } from './components/EnquiryForm';
 import { LocationSection } from './components/LocationSection';
 import { Footer } from './components/Footer';
-
+import {Why} from "./components/Why";
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -30,6 +30,7 @@ const App: React.FC = () => {
       
       <main>
         <Hero />
+        <Why />
         <About />
         <Statistics />
         <Keypoints />
