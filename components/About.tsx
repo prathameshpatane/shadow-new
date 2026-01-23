@@ -45,11 +45,6 @@ export const About: React.FC = () => {
         {/* Content Section */}
         <div className="relative space-y-8 scroll-reveal opacity-0 translate-x-12 transition-all duration-700 ease-out [&.is-visible]:opacity-100 [&.is-visible]:translate-x-0">
 
-          {/* Background Number */}
-          <span className="absolute -top-12 -left-6 text-[12rem] md:text-[16rem] font-serif font-bold text-pleo-blue opacity-20 leading-none select-none pointer-events-none -z-10">
-            24
-          </span>
-
           <div className="space-y-4 relative z-10">
             <h2 className="text-sm uppercase tracking-[0.4em] text-pleo-blue-dark font-bold">
               ABOUT US
@@ -89,15 +84,31 @@ export const About: React.FC = () => {
 
       {/* CITY LOCATIONS */}
       <div className="max-w-7xl mx-auto mt-24 space-y-12">
-        <div className="text-center space-y-4">
-          <h2 className="text-sm uppercase tracking-[0.4em] text-pleo-blue-dark font-bold">
+
+        {/* HEADINGS WITH 24 */}
+        <div className="relative text-center space-y-4">
+
+          {/* Background 24 */}
+          <span className="absolute inset-0 flex items-center justify-center
+            text-[10rem] md:text-[14rem]
+            font-serif font-bold
+            text-pleo-blue
+            opacity-21
+            select-none pointer-events-none
+            -z-10">
+            24
+          </span>
+
+          <h2 className="text-sm uppercase tracking-[0.4em] text-pleo-blue-dark font-bold relative z-10">
             Our Key Locations
           </h2>
-          <h3 className="text-4xl md:text-5xl font-serif text-pleo-text">
+
+          <h3 className="text-4xl md:text-5xl font-serif text-pleo-text relative z-10">
             Presence Across India
           </h3>
         </div>
 
+        {/* SCROLLING CITIES */}
         <div className="relative overflow-hidden py-8">
           <div className="flex animate-infinite-scroll gap-6">
             {[

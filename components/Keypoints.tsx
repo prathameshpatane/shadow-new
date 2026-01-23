@@ -66,22 +66,40 @@ export const Keypoints: React.FC = () => {
     <section id="why-shadow" className="py-24 bg-pleo-accent/40 px-6">
       <div className="max-w-7xl mx-auto">
         <style>{`
+          /* Reveal Animation */
           .keypoint-box {
             transform: translateY(40px) scale(0.96);
             transition: transform 0.7s ease, box-shadow 0.4s ease;
           }
+
           .keypoint-box.animate-in {
             transform: translateY(0) scale(1);
           }
+
+          /* Hover Bounce Animation */
+          @keyframes hoverBounce {
+            0% { transform: translateY(0) scale(1); }
+            30% { transform: translateY(-10px) scale(1.02); }
+            60% { transform: translateY(4px) scale(0.99); }
+            100% { transform: translateY(0) scale(1); }
+          }
+
+          .keypoint-box:hover {
+            animation: hoverBounce 0.6s ease;
+          }
+
+          /* Title Pulse */
           @keyframes zoomPulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
           }
+
           .zoom-pulse {
             animation: zoomPulse 3s ease-in-out infinite;
           }
         `}</style>
 
+        {/* Heading */}
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-sm uppercase tracking-[0.4em] text-pleo-blue-dark font-bold">
             The Distinction
@@ -91,22 +109,26 @@ export const Keypoints: React.FC = () => {
           </h3>
         </div>
 
+        {/* Grid */}
         <div ref={gridRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {whyPoints.map((point, i) => (
             <div
               key={i}
-              className="keypoint-box group p-12 rounded-[3rem] bg-white border-2 border-pleo-blue shadow-sm hover:shadow-2xl hover:-translate-y-4 transition-all duration-500"
+              className="keypoint-box group p-12 rounded-[3rem] bg-white border-2 border-pleo-blue shadow-sm hover:shadow-2xl transition-all duration-500"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               <div className="w-20 h-20 bg-pleo-blue-light rounded-3xl flex items-center justify-center mb-8 text-pleo-blue-dark group-hover:bg-pleo-blue transition-all duration-500">
                 {point.icon}
               </div>
+
               <h4 className="text-2xl font-bold mb-4 text-pleo-text">
                 {point.title}
               </h4>
+
               <p className="text-pleo-text/60 text-lg leading-relaxed">
                 {point.desc}
               </p>
+
               <div className="mt-8 h-1 w-0 bg-pleo-blue group-hover:w-16 transition-all duration-700 rounded-full" />
             </div>
           ))}
@@ -153,11 +175,13 @@ export const Statistics: React.FC = () => {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
           }
+
           .scroll-container {
             display: flex;
-            gap: 5rem; /* FIXED GAP */
+            gap: 5rem;
             animation: scroll 8s linear infinite;
           }
+
           .scroll-container:hover {
             animation-play-state: paused;
           }
@@ -192,7 +216,7 @@ export const Statistics: React.FC = () => {
               />
             </div>
 
-            {/* DUPLICATE SET FOR SMOOTH LOOP */}
+            {/* Duplicate for smooth loop */}
             <div className="flex gap-20">
               <StatCard
                 value="4 Lakhs+"

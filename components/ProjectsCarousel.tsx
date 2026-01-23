@@ -17,7 +17,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Gulmohar Vikas",
+    title: "Gulmohar Villas",
     category: "Investment Lands",
     image: "/gulmohar_1.png"
   }
