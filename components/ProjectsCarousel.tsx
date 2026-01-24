@@ -7,19 +7,19 @@ const projects = [
     id: 1,
     title: "Harvest Hills",
     category: "Premium NA Plots",
-    image: "/harvest_1.png"
+    image: "/imgone.jpg"
   },
   {
     id: 2,
     title: "Suraksha Enclave",
     category: "Gated Community",
-    image: "/suraksha_enclave.png"
+    image: "/imgtwo.jpg"
   },
   {
     id: 3,
     title: "Gulmohar Villas",
     category: "Investment Lands",
-    image: "/gulmohar_1.png"
+    image: "/imgthree.jpg"
   }
 ];
 

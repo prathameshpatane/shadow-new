@@ -156,12 +156,12 @@ const StatCard = ({
   desc: string;
   color: string;
 }) => (
-  <div className="flex-shrink-0 w-72 min-h-[260px] space-y-4 p-6 rounded-3xl bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 transition-all duration-500">
+  <div className="flex-shrink-0 w-72 min-h-[260px] space-y-4 p-6 rounded-3xl bg-white/20 backdrop-blur-sm border border-black/50 hover:bg-white/30 transition-all duration-500">
     <h3 className={`text-4xl md:text-5xl font-bold drop-shadow-lg ${color}`}>
       {value}
     </h3>
-    <h4 className="text-lg font-bold text-white drop-shadow-md">{title}</h4>
-    <p className="text-white/90 leading-relaxed text-sm">{desc}</p>
+    <h4 className="text-lg font-bold text-black drop-shadow-md">{title}</h4>
+    <p className="text-black/90 leading-relaxed text-sm">{desc}</p>
   </div>
 );
 
@@ -170,8 +170,8 @@ const StatCard = ({
 ========================= */
 export const Statistics: React.FC = () => {
   return (
-    <section className="py-24 bg-gradient-to-br from-blue-400 to-blue-200 px-6 relative overflow-hidden">
-      <div className="absolute inset-0 bg-black/40" />
+    <section className="py-24 bg-yellow-300 px-6 relative overflow-hidden">
+      <div className="absolute inset-0 bg-yellow-100" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <style>{`

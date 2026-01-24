@@ -13,7 +13,7 @@ const loopImages = [...leadershipImages, ...leadershipImages];
 export const Founders: React.FC = () => {
   return (
     <section id="founders" className="py-24 overflow-hidden relative min-h-[600px]">
-      {/* Video Background - replaces bg-gray-400 */}
+      {/* Video Background */}
       <video
         autoPlay
         loop
@@ -22,12 +22,11 @@ export const Founders: React.FC = () => {
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
         <source src="/build.mp4" type="video/mp4" />
-        
       </video>
-      
-      {/* Dark overlay for text/scroll readability */}
+
+      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/50 z-10" />
-      
+
       <div className="max-w-7xl mx-auto px-6 relative z-20">
         {/* Heading */}
         <div className="flex flex-col items-center text-center mb-20 space-y-4">
@@ -41,27 +40,18 @@ export const Founders: React.FC = () => {
         </div>
       </div>
 
-      {/* Infinite Scroll */}
+      {/* Infinite Straight Scroll */}
       <div className="relative w-full overflow-hidden z-20">
-        <div className="flex gap-16 w-max px-10 animate-horizontal-scroll">
+        <div className="flex items-center gap-16 w-max px-10 animate-horizontal-scroll">
           {loopImages.map((img, idx) => (
             <div
               key={idx}
-              className={`
+              className="
                 w-48 h-48 md:w-56 md:h-56
                 rounded-full overflow-hidden
                 shadow-2xl bg-white/95 backdrop-blur-md ring-4 ring-white/50
-                animate-bounce-strong
                 transition-transform duration-500 hover:scale-105
-                ${idx % 5 === 0 ? 'translate-y-12' : ''}
-                ${idx % 5 === 1 ? 'translate-y-6' : ''}
-                ${idx % 5 === 2 ? '-translate-y-4' : ''}
-                ${idx % 5 === 3 ? '-translate-y-10' : ''}
-                ${idx % 5 === 4 ? 'translate-y-4' : ''}
-              `}
-              style={{
-                animationDelay: `${idx * 0.25}s`,
-              }}
+              "
             >
               <img
                 src={img}
@@ -75,24 +65,12 @@ export const Founders: React.FC = () => {
 
       {/* Animations */}
       <style>{`
-        /* VERY FAST horizontal scroll */
         @keyframes horizontal-scroll {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
         }
         .animate-horizontal-scroll {
-          animation: horizontal-scroll 8s linear infinite;
-        }
-        /* STRONG bounce back */
-        @keyframes bounce-strong {
-          0%   { transform: translateY(0); }
-          25%  { transform: translateY(-30px); }
-          50%  { transform: translateY(0); }
-          75%  { transform: translateY(20px); }
-          100% { transform: translateY(0); }
-        }
-        .animate-bounce-strong {
-          animation: bounce-strong 1.6s ease-in-out infinite;
+          animation: horizontal-scroll 10s linear infinite;
         }
       `}</style>
     </section>

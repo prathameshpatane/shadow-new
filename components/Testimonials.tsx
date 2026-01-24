@@ -26,13 +26,13 @@ export const Testimonials: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-12">
           {testimonials.map((t, i) => (
-            <div key={i} className="p-12 rounded-3xl bg-red-100 border border-pleo-blue/10 relative animate-slide-up hover:scale-105 hover:animate-bounce-up transition-all duration-500 hover:shadow-xl" style={{animationDelay: `${i * 300}ms`}}>
+            <div key={i} className="p-12 rounded-3xl bg-orange-100 border border-black/100 relative animate-slide-up hover:scale-105 hover:animate-bounce-up transition-all duration-500 hover:shadow-xl" style={{animationDelay: `${i * 300}ms`}}>
               <Quote className="absolute top-10 right-10 w-12 h-12 text-pleo-blue opacity-30 animate-pulse" />
               <div className="space-y-6">
                 <p className="text-xl italic font-serif text-pleo-text/200 leading-relaxed">"{t.content}"</p>
                 <div>
                   <h5 className="font-bold text-pleo-text">{t.name}</h5>
-                  <p className="text-sm text-pleo-blue-dark uppercase tracking-widest mt-1">{t.location}</p>
+                  <p className="text-sm text-black uppercase tracking-widest mt-1">{t.location}</p>
                 </div>
               </div>
             </div>
