@@ -79,7 +79,7 @@ export const About: React.FC = () => {
           playbackRate={2}
           className="absolute inset-0 w-full h-full object-cover z-0 opacity-90"
         >
-          <source src="/earth.mp4" type="video/mp4" />
+          <source src="/green.mp4" type="video/mp4" />
           
         </video>
         
