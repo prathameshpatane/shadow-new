@@ -66,7 +66,7 @@ export const Keypoints: React.FC = () => {
     <section
       id="why-shadow"
       className="relative py-24 px-6 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/pic.png')" }}
+      style={{ backgroundImage: "url('/prop.jpg')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40" />
@@ -183,7 +183,7 @@ export const Statistics: React.FC = () => {
           .scroll-container {
             display: flex;
             gap: 5rem;
-            animation: scroll 8s linear infinite;
+            animation: scroll 2s linear infinite;
           }
 
           .scroll-container:hover {

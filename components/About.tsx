@@ -8,7 +8,6 @@ export const About: React.FC = () => {
     >
       {/* ================= KEY LOCATIONS ================= */}
       <div className="max-w-7xl mx-auto space-y-16">
-
         {/* Heading with 24 */}
         <div className="relative text-center space-y-4">
           <span
@@ -70,21 +69,36 @@ export const About: React.FC = () => {
       </div>
 
       {/* ================= GLOBAL PRESENCE ================= */}
-      <div className="mt-32 bg-gray-200 py-16">
-        <div className="max-w-7xl mx-auto text-center space-y-10">
-
+      <div className="mt-32 py-16 relative overflow-hidden">
+        {/* Video Background replaces bg-gray-200 */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          playbackRate={2}
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-90"
+        >
+          <source src="/earth.mp4" type="video/mp4" />
+          
+        </video>
+        
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/50 z-10" />
+        
+        <div className="max-w-7xl mx-auto text-center space-y-10 relative z-20">
           <div className="space-y-4">
-            <h2 className="text-sm uppercase tracking-widest text-pleo-blue-dark font-bold animate-slide-text">
+            <h2 className="text-sm uppercase tracking-widest text-white font-bold animate-slide-text drop-shadow-lg">
               Global Reach
             </h2>
 
-            <h3 className="text-4xl md:text-5xl font-serif text-pleo-text animate-slide-text animation-delay-200">
+            <h3 className="text-4xl md:text-5xl font-serif text-white animate-slide-text animation-delay-200 drop-shadow-2xl">
               Our Global Presence
             </h3>
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="rounded-[3rem] overflow-hidden shadow-2xl animate-slide-up animation-delay-400 hover:shadow-3xl hover:border-4 hover:border-pleo-blue transition-all duration-500 bg-white">
+            <div className="rounded-[3rem] overflow-hidden shadow-2xl animate-slide-up animation-delay-400 hover:shadow-3xl hover:border-4 hover:border-pleo-blue transition-all duration-500 bg-white/95 backdrop-blur-xl">
               <img
                 src="/mapnew.png"
                 alt="Global Presence Map"
@@ -92,7 +106,6 @@ export const About: React.FC = () => {
               />
             </div>
           </div>
-
         </div>
       </div>
 
