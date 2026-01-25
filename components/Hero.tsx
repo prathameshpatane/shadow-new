@@ -45,11 +45,11 @@ export const Hero: React.FC = () => {
             className="text-5xl md:text-8xl lg:text-9xl text-blue-800 leading-tight font-bold animate-fade-in-up opacity-0"
             style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}
           >
-            <span className="font-[cursive] font-normal">
+            <span className="text-slate-800 font-serif">
               Shadow Infratech
             </span>
             <br />
-            <span className="text-blue-800 font-serif">Pvt Ltd</span>
+            <span className="text-slate-800 font-serif">Pvt Ltd</span>
           </h1>
 
           <p

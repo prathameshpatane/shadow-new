@@ -170,8 +170,12 @@ const StatCard = ({
 ========================= */
 export const Statistics: React.FC = () => {
   return (
-    <section className="py-24 bg-yellow-300 px-6 relative overflow-hidden">
-      <div className="absolute inset-0 bg-yellow-100" />
+    <section
+      className="py-24 px-6 relative overflow-hidden"
+      style={{ backgroundImage: "url('/ok.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.9, }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/30" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <style>{`
