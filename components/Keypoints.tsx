@@ -77,27 +77,22 @@ export const Keypoints: React.FC = () => {
             transform: translateY(40px) scale(0.96);
             transition: transform 0.7s ease, box-shadow 0.4s ease;
           }
-
           .keypoint-box.animate-in {
             transform: translateY(0) scale(1);
           }
-
           @keyframes hoverBounce {
             0% { transform: translateY(0) scale(1); }
             30% { transform: translateY(-10px) scale(1.02); }
             60% { transform: translateY(4px) scale(0.99); }
             100% { transform: translateY(0) scale(1); }
           }
-
           .keypoint-box:hover {
             animation: hoverBounce 0.6s ease;
           }
-
           @keyframes zoomPulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
           }
-
           .zoom-pulse {
             animation: zoomPulse 3s ease-in-out infinite;
           }
@@ -143,76 +138,19 @@ export const Keypoints: React.FC = () => {
 };
 
 /* =========================
-   STAT CARD
-========================= */
-const StatCard = ({
-  value,
-  title,
-  desc,
-  color,
-}: {
-  value: string;
-  title: string;
-  desc: string;
-  color: string;
-}) => (
-  <div className="flex-shrink-0 w-72 min-h-[260px] space-y-4 p-6 rounded-3xl bg-white/20 backdrop-blur-sm border border-black/50 hover:bg-white/30 transition-all duration-500">
-    <h3 className={`text-4xl md:text-5xl font-bold drop-shadow-lg ${color}`}>
-      {value}
-    </h3>
-    <h4 className="text-lg font-bold text-black drop-shadow-md">{title}</h4>
-    <p className="text-black/90 leading-relaxed text-sm">{desc}</p>
-  </div>
-);
-
-/* =========================
-   STATISTICS COMPONENT
+   STATISTICS COMPONENT (FULL IMAGE)
 ========================= */
 export const Statistics: React.FC = () => {
   return (
     <section
-      className="py-24 px-6 relative overflow-hidden"
-      style={{ backgroundImage: "url('/ok.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.9, }}
+      className="relative min-h-screen w-full bg-cover bg-center overflow-hidden"
+      style={{ backgroundImage: "url('/lando.jpeg')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/30" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <style>{`
-          @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-
-          .scroll-container {
-            display: flex;
-            gap: 5rem;
-            animation: scroll 2s linear infinite;
-          }
-
-          .scroll-container:hover {
-            animation-play-state: paused;
-          }
-        `}</style>
-
-        <div className="overflow-hidden">
-          <div className="scroll-container">
-            <div className="flex gap-20">
-              <StatCard value="4 Lakhs+" title="SQ. FT. Sold" desc="We have successfully sold upto 4lakhs plus SQ. Ft. land till date." color="text-yellow-400" />
-              <StatCard value="₹ 300 Cr." title="Project Costs Completed" desc="Shadow Infratech has achieved a remarkable turnover of over ₹300 crore through excellence, strategic execution, and customer trust." color="text-green-400" />
-              <StatCard value="25%" title="ROI Every Year on Each Project" desc="Shadow Infratech consistently delivers an impressive 25% ROI annually on each project." color="text-blue-400" />
-              <StatCard value="₹ 250 Cr." title="Project Ongoing" desc="Shadow Infratech is currently managing ₹250 crore worth of ongoing projects." color="text-purple-400" />
-            </div>
-
-            <div className="flex gap-20">
-              <StatCard value="4 Lakhs+" title="SQ. FT. Sold" desc="We have successfully sold upto 4lakhs plus SQ. Ft. land till date." color="text-yellow-400" />
-              <StatCard value="₹ 300 Cr." title="Project Costs Completed" desc="Shadow Infratech has achieved a remarkable turnover of over ₹300 crore through excellence, strategic execution, and customer trust." color="text-green-400" />
-              <StatCard value="25%" title="ROI Every Year on Each Project" desc="Shadow Infratech consistently delivers an impressive 25% ROI annually on each project." color="text-blue-400" />
-              <StatCard value="₹ 250 Cr." title="Project Ongoing" desc="Shadow Infratech is currently managing ₹250 crore worth of ongoing projects." color="text-purple-400" />
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Empty container – keeps height */}
+      <div className="relative z-10 h-full w-full" />
     </section>
   );
 };

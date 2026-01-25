@@ -5,6 +5,7 @@ const leadershipImages = [
   '/parttwo.jpg',
   '/partthree.jpg',
   '/partfour.jpg',
+  '/partfive.jpg',
 ];
 
 /* duplicate for seamless loop */
@@ -48,7 +49,7 @@ export const Founders: React.FC = () => {
               key={idx}
               className="
                 w-48 h-48 md:w-56 md:h-56
-                rounded-full overflow-hidden
+                rounded-xl overflow-hidden
                 shadow-2xl bg-white/95 backdrop-blur-md ring-4 ring-white/50
                 transition-transform duration-500 hover:scale-105
               "

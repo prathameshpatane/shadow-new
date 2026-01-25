@@ -42,14 +42,14 @@ export const Hero: React.FC = () => {
           </span>
 
           <h1
-            className="text-5xl md:text-8xl lg:text-9xl text-blue-800 leading-tight font-bold animate-fade-in-up opacity-0"
+            className="text-5xl md:text-8xl lg:text-9xl leading-tight font-bold animate-fade-in-up opacity-0"
             style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}
           >
-            <span className="text-slate-800 font-serif">
-              Shadow Infratech
+            <span className="text-white drop-shadow-[0_0_1px_rgba(0,0,0,1)] font-serif">
+              Land Replace Tomorrow
             </span>
             <br />
-            <span className="text-slate-800 font-serif">Pvt Ltd</span>
+            <span className="text-slate-800 font-serif"></span>
           </h1>
 
           <p
