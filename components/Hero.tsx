@@ -48,10 +48,10 @@ export const Hero: React.FC = () => {
             <span
               className="
                 text-white font-serif
-                drop-shadow-[1px_0_0_rgba(255,193,7,1)]
-                drop-shadow-[-1px_0_0_rgba(255,193,7,1)]
-                drop-shadow-[0_1px_0_rgba(255,193,7,1)]
-                drop-shadow-[0_-1px_0_rgba(255,193,7,1)]
+                 drop-shadow-[2px_0_0_rgba(255,193,7,1)]
+  drop-shadow-[-2px_0_0_rgba(255,193,7,1)]
+  drop-shadow-[0_2px_0_rgba(255,193,7,1)]
+  drop-shadow-[0_-2px_0_rgba(255,193,7,1)]
               "
             >
               Land Replace Tomorrow
@@ -61,7 +61,10 @@ export const Hero: React.FC = () => {
           </h1>
 
           <p
-            className="text-lg md:text-3xl font-bold text-black/80 tracking-wide animate-fade-in opacity-0"
+            className="text-lg md:text-3xl font-bold text-white drop-shadow-[2px_0_0_rgba(255,193,7,1)]
+  drop-shadow-[-2px_0_0_rgba(255,193,7,1)]
+  drop-shadow-[0_2px_0_rgba(255,193,7,1)]
+  drop-shadow-[0_-2px_0_rgba(255,193,7,1)] tracking-wide animate-fade-in opacity-0"
             style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}
           >
             Key of your dream home
@@ -80,7 +83,11 @@ export const Hero: React.FC = () => {
           `}</style>
 
           <p
-            className="text-lg md:text-2xl lg:text-3xl font-bold text-black/90 max-w-4xl mx-auto leading-relaxed animate-fade-in opacity-0"
+            className="text-lg md:text-2xl lg:text-3xl font-bold text-white drop-shadow-[1px_0_0_rgba(255,193,7,1)]
+                 drop-shadow-[2px_0_0_rgba(255,193,7,1)]
+  drop-shadow-[-2px_0_0_rgba(255,193,7,1)]
+  drop-shadow-[0_2px_0_rgba(255,193,7,1)]
+  drop-shadow-[0_-2px_0_rgba(255,193,7,1)] max-w-4xl mx-auto leading-relaxed animate-fade-in opacity-0"
             style={{ animationDelay: "1.2s", animationFillMode: "forwards" }}
           >
             Premium NA Plots | Residential & Agricultural Plots
