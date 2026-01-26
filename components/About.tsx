@@ -12,10 +12,10 @@ export const About: React.FC = () => {
         <div className="relative text-center space-y-4">
           <span
             className="absolute inset-0 flex items-center justify-center
-              text-[10rem] md:text-[14rem]
+              text-[34rem] md:text-[18rem]
               font-serif font-bold
               text-pleo-blue
-              opacity-20
+              opacity-90
               select-none pointer-events-none
               -z-10"
           >
@@ -35,17 +35,17 @@ export const About: React.FC = () => {
         <div className="relative overflow-hidden py-8">
           <div className="flex gap-6 animate-infinite-scroll">
             {[
-              { name: 'Hadapsar', image: '/hadapsar.png' },
-              { name: 'Lohegaon', image: '/lohegoan.png' },
-              { name: 'Wagholi', image: '/wagholi.png' },
-              { name: 'Rajgad', image: '/rajgad.png' },
-              { name: 'Moshi', image: '/moshi.png' },
+              { name: 'Hadapsar', image: '/hadap.jpg' },
+              { name: 'Lohegaon', image: '/loh.jpg' },
+              { name: 'Wagholi', image: '/wagh.jpg' },
+              { name: 'Rajgad', image: '/raj.jpg' },
+              { name: 'Moshi', image: '/mos.jpg' },
               { name: 'Kharadi Annexe', image: '/kharadi.png' },
-              { name: 'Hadapsar', image: '/hadapsar.png' },
-              { name: 'Lohegaon', image: '/lohegoan.png' },
-              { name: 'Wagholi', image: '/wagholi.png' },
-              { name: 'Rajgad', image: '/rajgad.png' },
-              { name: 'Moshi', image: '/moshi.png' },
+              { name: 'Hadapsar', image: '/hadap.jpg' },
+              { name: 'Lohegaon', image: '/loh.jpg' },
+              { name: 'Wagholi', image: '/wagh.jpg' },
+              { name: 'Rajgad', image: '/raj.jpg' },
+              { name: 'Moshi', image: '/mos.jpg' },
               { name: 'Kharadi Annexe', image: '/kharadi.png' },
             ].map((city, index) => (
               <div
@@ -100,7 +100,7 @@ export const About: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="rounded-[3rem] overflow-hidden shadow-2xl animate-slide-up animation-delay-400 hover:shadow-3xl hover:border-4 hover:border-pleo-blue transition-all duration-500 bg-white/95 backdrop-blur-xl">
               <img
-                src="/mapnew.png"
+                src="/glo.jpg "
                 alt="Global Presence Map"
                 className="w-full h-auto hover:scale-105 transition-transform duration-1000"
               />

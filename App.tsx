@@ -5,7 +5,6 @@ import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Keypoints, Statistics } from './components/Keypoints';
 import { ProjectsCarousel } from './components/ProjectsCarousel';
-import { Gallery } from './components/Gallery';
 import { GoogleReviews } from './components/GoogleReviews';
 import { Founders } from './components/Founders';
 import { Testimonials } from './components/Testimonials';
@@ -35,7 +34,7 @@ const App: React.FC = () => {
         <Statistics />
         <Keypoints />
         <ProjectsCarousel />
-        <Gallery />
+  
         <GoogleReviews />
         <Founders />
         <Testimonials />

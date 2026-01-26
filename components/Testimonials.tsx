@@ -30,7 +30,7 @@ export const Testimonials: React.FC = () => {
               loop
               playsInline
             >
-              <source src="/testi.mp4" type="video/mp4" />
+              <source src="/greytest.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -43,7 +43,7 @@ export const Testimonials: React.FC = () => {
             <Quote className="absolute -top-6 -right-6 w-14 h-14 text-pleo-blue opacity-20 animate-pulse z-10" />
 
             <img
-              src="/testi.jpeg"
+              src="/greytest1.jpg"
               alt="Client testimonial"
               className="w-full rounded-3xl shadow-lg"
             />

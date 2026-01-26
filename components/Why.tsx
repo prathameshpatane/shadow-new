@@ -32,7 +32,7 @@ export const Why: React.FC = () => {
         {/* ================= LEFT IMAGE ================= */}
         <div className="relative scroll-reveal opacity-0 -translate-x-12 transition-all duration-700 ease-out [&.is-visible]:opacity-100 [&.is-visible]:translate-x-0">
           <img
-            src="/main.jpeg"
+            src="/shadownew.jpeg"
             alt="Why Shadow Infratech"
             className="absolute inset-0 w-full h-full object-cover object-center block"
           />

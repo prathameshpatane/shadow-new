@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const Hero: React.FC = () => {
   return (
@@ -35,17 +35,25 @@ export const Hero: React.FC = () => {
         <div className="text-center max-w-6xl mx-auto space-y-6">
 
           <span
-            className="inline-block text-sm uppercase tracking-[0.5em] text-black font-bold font-dark animate-fade-in-down opacity-0"
-            style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}
+            className="inline-block text-sm uppercase tracking-[0.5em] text-black font-bold animate-fade-in-down opacity-0"
+            style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
           >
             BUILDING
           </span>
 
           <h1
             className="text-5xl md:text-8xl lg:text-9xl leading-tight font-bold animate-fade-in-up opacity-0"
-            style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}
+            style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}
           >
-            <span className="text-white drop-shadow-[0_0_1px_rgba(0,0,0,1)] font-serif">
+            <span
+              className="
+                text-white font-serif
+                drop-shadow-[1px_0_0_rgba(255,193,7,1)]
+                drop-shadow-[-1px_0_0_rgba(255,193,7,1)]
+                drop-shadow-[0_1px_0_rgba(255,193,7,1)]
+                drop-shadow-[0_-1px_0_rgba(255,193,7,1)]
+              "
+            >
               Land Replace Tomorrow
             </span>
             <br />
@@ -53,15 +61,15 @@ export const Hero: React.FC = () => {
           </h1>
 
           <p
-            className="text-lg md:text-2xl font-[cursive] text-black/80 tracking-wide animate-fade-in opacity-0"
-            style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}
+            className="text-lg md:text-3xl font-bold text-black/80 tracking-wide animate-fade-in opacity-0"
+            style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}
           >
-            Key of your dream homes
+            Key of your dream home
           </p>
 
           <div
             className="h-0.5 w-0 bg-pleo-blue mx-auto shadow-lg animate-[grow_1s_ease-out_forwards]"
-            style={{ animationDelay: '1s' }}
+            style={{ animationDelay: "1s" }}
           />
 
           <style>{`
@@ -73,7 +81,7 @@ export const Hero: React.FC = () => {
 
           <p
             className="text-lg md:text-2xl lg:text-3xl font-bold text-black/90 max-w-4xl mx-auto leading-relaxed animate-fade-in opacity-0"
-            style={{ animationDelay: '1.2s', animationFillMode: 'forwards' }}
+            style={{ animationDelay: "1.2s", animationFillMode: "forwards" }}
           >
             Premium NA Plots | Residential & Agricultural Plots
           </p>
@@ -81,7 +89,7 @@ export const Hero: React.FC = () => {
           {/* BUTTONS */}
           <div
             className="flex flex-col md:flex-row items-center justify-center gap-6 mt-12 animate-fade-in-up opacity-0"
-            style={{ animationDelay: '1.5s', animationFillMode: 'forwards' }}
+            style={{ animationDelay: "1.5s", animationFillMode: "forwards" }}
           >
             <a
               href="#projects"

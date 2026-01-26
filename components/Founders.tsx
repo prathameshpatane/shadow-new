@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const leadershipImages = [
-  '/partone.jpg',
-  '/parttwo.jpg',
-  '/partthree.jpg',
-  '/partfour.jpg',
-  '/partfive.jpg',
+  "/partone.jpg",
+  "/parttwo.jpg",
+  "/partthree.jpg",
+  "/partfour.jpg",
+  "/partfive.jpg",
 ];
 
 /* duplicate for seamless loop */
@@ -14,6 +14,7 @@ const loopImages = [...leadershipImages, ...leadershipImages];
 export const Founders: React.FC = () => {
   return (
     <section id="founders" className="py-24 overflow-hidden relative min-h-[600px]">
+      
       {/* Video Background */}
       <video
         autoPlay
@@ -43,21 +44,24 @@ export const Founders: React.FC = () => {
 
       {/* Infinite Straight Scroll */}
       <div className="relative w-full overflow-hidden z-20">
-        <div className="flex items-center gap-16 w-max px-10 animate-horizontal-scroll">
+        <div className="flex items-center gap-20 w-max px-12 animate-horizontal-scroll">
           {loopImages.map((img, idx) => (
             <div
               key={idx}
               className="
-                w-48 h-48 md:w-56 md:h-56
-                rounded-xl overflow-hidden
-                shadow-2xl bg-white/95 backdrop-blur-md ring-4 ring-white/50
+                w-56 h-56
+                md:w-64 md:h-64
+                rounded-2xl overflow-hidden
+                shadow-2xl bg-white/95 backdrop-blur-md
+                ring-4 ring-white/50
                 transition-transform duration-500 hover:scale-105
+                flex items-center justify-center
               "
             >
               <img
                 src={img}
-                alt="Partner"
-                className="w-full h-full object-cover transition duration-700 brightness-105"
+                alt="Partner logo"
+                className="w-full h-full object-contain p-6"
               />
             </div>
           ))}
