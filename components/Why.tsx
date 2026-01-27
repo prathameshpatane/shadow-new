@@ -1,55 +1,52 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 
 export const Why: React.FC = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    const elements = sectionRef.current?.querySelectorAll(".scroll-reveal");
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section
       id="about"
-      ref={sectionRef}
-      className="w-screen h-screen overflow-hidden"
+      className="w-full pt-12 pb-0 px-6 overflow-hidden"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full h-full">
+      <div className="text-center max-w-5xl mx-auto">
 
-        {/* ================= LEFT IMAGE ================= */}
-        <div className="relative scroll-reveal opacity-0 -translate-x-12 transition-all duration-700 ease-out [&.is-visible]:opacity-100 [&.is-visible]:translate-x-0">
-          <img
-            src="/shadownew.jpeg"
-            alt="Why Shadow Infratech"
-            className="absolute inset-0 w-full h-full object-cover object-center block"
-          />
-        </div>
+        {/* STATS – SAME LINE */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
+          <span className="text-2xl md:text-4xl font-extrabold text-blue drop-shadow-[2px_2px_0_rgba(255,193,7,1)]">
+            2.6K+ Happy Customers
+          </span>
 
-        {/* ================= RIGHT VIDEO ================= */}
-        <div className="relative scroll-reveal opacity-0 translate-x-12 transition-all duration-700 ease-out [&.is-visible]:opacity-100 [&.is-visible]:translate-x-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover object-right block"
-          >
-            <source src="/new.mp4" type="video/mp4" />
-          </video>
+          <span className="hidden md:block w-[2px] h-8 bg-yellow-400" />
+
+          <span className="text-2xl md:text-4xl font-extrabold text-blue drop-shadow-[2px_2px_0_rgba(255,193,7,1)]">
+            11 Lakh+ SQ. Ft. Land Sold
+          </span>
         </div>
+        <br /><br/>
+        {/* MAIN LINE – ANIMATED */}
+        <h2 className="animate-drift text-3xl md:text-5xl lg:text-8xl font-serif font-bold text-yellow-400 tracking-wide leading-tight m-0  drop-shadow-[2px_0_0_#000]
+    drop-shadow-[-2px_0_0_#000]
+    drop-shadow-[0_2px_0_#000]
+    drop-shadow-[0_-2px_0_#000] whitespace-nowrap">
+          Land Replace Tomorrow
+        </h2>
+
+        {/* ANIMATION */}
+        <style>{`
+          @keyframes drift {
+            0% {
+              transform: translateX(-30px);
+            }
+            50% {
+              transform: translateX(30px);
+            }
+            100% {
+              transform: translateX(-30px);
+            }
+          }
+
+          .animate-drift {
+            animation: drift 3s ease-in-out infinite;
+          }
+        `}</style>
 
       </div>
     </section>
