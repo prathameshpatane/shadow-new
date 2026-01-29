@@ -1,5 +1,5 @@
-import React from 'react';
-import { Quote } from 'lucide-react';
+import React from "react";
+import { Quote } from "lucide-react";
 
 export const Testimonials: React.FC = () => {
   return (
@@ -13,46 +13,33 @@ export const Testimonials: React.FC = () => {
           </h2>
         </div>
 
-        {/* Content */}
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+        {/* VIDEOS ONLY */}
+        <div className="grid md:grid-cols-3 gap-10 animate-slide-up">
 
-          {/* VIDEO */}
-          <div
-            className="relative animate-slide-up"
-            style={{ animationDelay: '0ms' }}
-          >
-            <Quote className="absolute -top-6 -right-6 w-14 h-14 text-pleo-blue opacity-20 animate-pulse z-10" />
+          {["/test2.mp4", "/test1.mp4", "/test3.mp4"].map(
+            (video, index) => (
+              <div
+                key={index}
+                className="relative rounded-3xl shadow-lg overflow-hidden"
+              >
+                <Quote className="absolute -top-6 -right-6 w-14 h-14 text-pleo-blue opacity-20 animate-pulse z-10" />
 
-            <video
-              className="w-full rounded-3xl shadow-lg"
-              autoPlay
-              muted
-              loop
-              playsInline
-            >
-              <source src="/greytest.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-
-          {/* IMAGE */}
-          <div
-            className="relative animate-slide-up space-y-6"
-            style={{ animationDelay: '300ms' }}
-          >
-            <Quote className="absolute -top-6 -right-6 w-14 h-14 text-pleo-blue opacity-20 animate-pulse z-10" />
-
-            <img
-              src="/greytest1.jpg"
-              alt="Client testimonial"
-              className="w-full rounded-3xl shadow-lg"
-            />
-
-            <p className="text-xl italic font-serif text-pleo-text leading-relaxed">
-              “Most trusted ethical and customer support company in Pune. Very
-              good experience with Shadow Infratech Pvt Ltd.”
-            </p>
-          </div>
+                {/* Fixed height wrapper */}
+                <div className="h-[420px] w-full">
+                  <video
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    loop
+                    playsInline
+                    controls
+                  >
+                    <source src={video} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            )
+          )}
 
         </div>
       </div>

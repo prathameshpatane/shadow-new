@@ -1,109 +1,124 @@
-import React from 'react';
+import React from "react";
 
 export const About: React.FC = () => {
   return (
-    <section
-      id="about"
-      className="py-24 md:py-32 px-6 overflow-hidden"
-    >
+    <section id="about" className="py-24 md:py-32 px-6 overflow-hidden">
       {/* ================= KEY LOCATIONS ================= */}
-      <div className="max-w-7xl mx-auto space-y-16">
-        {/* Heading with 24 */}
+      <div className="max-w-7xl mx-auto space-y-20">
+        {/* Heading */}
         <div className="relative text-center space-y-4">
           <span
             className="absolute inset-0 flex items-center justify-center
-              text-[34rem] md:text-[18rem]
-              font-serif font-bold
-              text-pleo-blue
-              opacity-90
-              select-none pointer-events-none
-              -z-10"
+            text-[14rem] md:text-[18rem]
+            font-serif font-bold
+            text-pleo-blue
+            opacity-90
+            select-none pointer-events-none
+            -z-10"
           >
             24
           </span>
 
           <h2 className="text-sm uppercase tracking-[0.4em] text-pleo-blue-dark font-bold">
-            Our Key Locations
+            Our Purpose
           </h2>
 
           <h3 className="text-4xl md:text-5xl font-serif text-pleo-text">
-            Presence Across India
+          Giving Land a Future.
           </h3>
         </div>
 
-        {/* Scrolling Cities */}
-        <div className="relative overflow-hidden py-8">
-          <div className="flex gap-6 animate-infinite-scroll">
-            {[
-              { name: 'Hadapsar', image: '/hadap.jpg' },
-              { name: 'Lohegaon', image: '/loh.jpg' },
-              { name: 'Wagholi', image: '/waghol.jpeg' },
-              { name: 'Rajgad', image: '/raj.jpg' },
-              { name: 'Moshi', image: '/mos.jpg' },
-              { name: 'Kharadi Annexe', image: '/kharadi.png' },
-              { name: 'Hadapsar', image: '/hadap.jpg' },
-              { name: 'Lohegaon', image: '/loh.jpg' },
-              { name: 'Wagholi', image: '/waghol.jpeg' },
-              { name: 'Rajgad', image: '/raj.jpg' },
-              { name: 'Moshi', image: '/mos.jpg' },
-              { name: 'Kharadi Annexe', image: '/kharadi.png' },
-            ].map((city, index) => (
-              <div
-                key={index}
-                className="relative flex-shrink-0 w-64 h-80 rounded-2xl overflow-hidden shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl group"
+        {/* ================= BIG IMAGE (ENLARGED) ================= */}
+        <div className="flex justify-center">
+          <div
+            className="relative w-full max-w-[90rem]
+            h-[520px] md:h-[680px] lg:h-[760px]
+            rounded-[4rem] overflow-hidden
+            shadow-2xl group transition-all duration-700"
+          >
+            <img
+              src="/fam.jpg"
+              alt="Presence Across India"
+              className="w-full h-full object-cover
+              group-hover:scale-105 transition-transform duration-1000"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end">
+              <h4
+                className="text-white text-3xl md:text-4xl lg:text-3xl
+                font-serif font-light w-full p-10 text-center drop-shadow-2xl"
               >
-                <img
-                  src={city.image}
-                  alt={city.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end">
-                  <h4 className="text-white font-bold text-lg w-full p-4 text-center">
-                    {city.name}
-                  </h4>
-                </div>
-              </div>
-            ))}
+                Crafting the world’s finest developments—where every plot is designed with purpose, value, and a vision for generations
+              </h4>
+            </div>
           </div>
         </div>
       </div>
 
       {/* ================= GLOBAL PRESENCE ================= */}
-      <div className="mt-32 py-16 relative overflow-hidden">
-        {/* Video Background replaces bg-gray-200 */}
+      <div className="mt-36 py-24 relative overflow-hidden">
+        {/* Video Background */}
         <video
           autoPlay
           loop
           muted
           playsInline
-          playbackRate={2}
           className="absolute inset-0 w-full h-full object-cover z-0 opacity-90"
         >
           <source src="/green.mp4" type="video/mp4" />
-          
         </video>
-        
-        {/* Overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/50 z-10" />
-        
-        <div className="max-w-7xl mx-auto text-center space-y-10 relative z-20">
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/60 z-10" />
+
+        <div className="max-w-7xl mx-auto text-center space-y-14 relative z-20 px-4">
           <div className="space-y-4">
             <h2 className="text-sm uppercase tracking-widest text-white font-bold animate-slide-text drop-shadow-lg">
-              Global Reach
+              News
             </h2>
 
             <h3 className="text-4xl md:text-5xl font-serif text-white animate-slide-text animation-delay-200 drop-shadow-2xl">
-              Our Global Presence
+              Our Headlines
             </h3>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="rounded-[3rem] overflow-hidden shadow-2xl animate-slide-up animation-delay-400 hover:shadow-3xl hover:border-4 hover:border-pleo-blue transition-all duration-500 bg-white/95 backdrop-blur-xl">
-              <img
-                src="/glo.jpg "
-                alt="Global Presence Map"
-                className="w-full h-auto hover:scale-105 transition-transform duration-1000"
-              />
+          {/* ================= IMAGE + AUDIO ================= */}
+          <div className="max-w-6xl mx-auto">
+            <div
+              className="grid md:grid-cols-2 gap-14 items-center
+              rounded-[3rem] p-12 bg-white/95 backdrop-blur-xl
+              shadow-2xl animate-slide-up animation-delay-400"
+            >
+              {/* Image */}
+              <div className="rounded-[2.5rem] overflow-hidden shadow-xl">
+                <img
+                  src="/amar.jpg"
+                  alt="Global Presence"
+                  className="w-full h-full object-cover
+                  hover:scale-105 transition-transform duration-1000"
+                />
+              </div>
+
+              {/* Audio */}
+              <div className="flex flex-col justify-center text-left space-y-6">
+                <h4 className="text-3xl md:text-4xl font-serif text-red-800">
+                  Listen to Our Global Story
+                </h4>
+
+                <p className="text-gray-700 leading-relaxed text-lg">
+                  Discover how our journey has evolved from local beginnings to a
+                  global presence rooted in trust and excellence. Through strategic
+                  growth, meaningful partnerships, and a deep understanding of
+                  diverse markets, we have expanded our footprint across borders.
+                  Our commitment to quality, transparency, and innovation continues
+                  to shape lasting relationships worldwide.
+                </p>
+
+                <audio controls className="w-full rounded-xl shadow-lg">
+                  <source src="/audio.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
             </div>
           </div>
         </div>
@@ -111,23 +126,25 @@ export const About: React.FC = () => {
 
       {/* ================= ANIMATIONS ================= */}
       <style jsx>{`
-        @keyframes infinite-scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-
         @keyframes slide-text {
-          0%, 100% { transform: translateX(-20px); }
-          50% { transform: translateX(20px); }
+          0%,
+          100% {
+            transform: translateX(-20px);
+          }
+          50% {
+            transform: translateX(20px);
+          }
         }
 
         @keyframes slide-up {
-          from { opacity: 0; transform: translateY(50px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-
-        .animate-infinite-scroll {
-          animation: infinite-scroll 8s linear infinite;
+          from {
+            opacity: 0;
+            transform: translateY(50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
 
         .animate-slide-text {
@@ -139,11 +156,12 @@ export const About: React.FC = () => {
           opacity: 0;
         }
 
-        .animation-delay-200 { animation-delay: 0.2s; }
-        .animation-delay-400 { animation-delay: 0.4s; }
+        .animation-delay-200 {
+          animation-delay: 0.2s;
+        }
 
-        .hover\\:shadow-3xl:hover {
-          box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+        .animation-delay-400 {
+          animation-delay: 0.4s;
         }
       `}</style>
     </section>

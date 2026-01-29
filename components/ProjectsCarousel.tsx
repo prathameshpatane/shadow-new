@@ -5,13 +5,13 @@ const projects = [
   {
     id: 1,
     title: "Harvest Hills",
-    category: "Premium NA Plots",
+    category: " ",
     image: "/imgone.jpg",
   },
   {
     id: 2,
     title: "VSG Suraksha Enclave",
-    category: "Gated Community",
+    category: "",
     image: "/imgtwo.jpg",
   },
 ];
