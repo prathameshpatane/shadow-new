@@ -13,7 +13,6 @@ import { EnquiryForm } from './components/EnquiryForm';
 import { LocationSection } from './components/LocationSection';
 import { Footer } from './components/Footer';
 import { Why } from "./components/Why";
-import ScrollToTop from './components/ScrolltoTop';
 import { Gallery } from './components/Gallery';
 import  AboutShadow from './pages/AboutShadow';
 import GalleryShadow from './pages/GalleryShadow';
@@ -115,7 +114,7 @@ const AppContent: React.FC = () => {
 const App: React.FC = () => {
   return (
     <Router>
-      <ScrollToTop/>
+
       <AppContent />
     </Router>
   );
