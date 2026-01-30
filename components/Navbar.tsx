@@ -13,7 +13,8 @@ export const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
     { name: 'About', href: '/aboutshadow' },
     { name: 'Projects', href: '/projectsshadow' },
     { name: 'Gallery', href: '/galleryshadow' },
-    { name: 'Contact', href: '/contactshadow' },
+    { name: 'Team', href: '/teamshadow' },
+     { name: 'Contact', href: '/contactshadow' },
   ];
 
   const textColorClass = scrolled ? 'text-pleo-text' : 'text-white';

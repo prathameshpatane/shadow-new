@@ -119,7 +119,7 @@ export const Keypoints: React.FC = () => {
           {whyPoints.map((point, i) => (
             <div
               key={i}
-              className="keypoint-box group p-12 rounded-[3rem] bg-orange-100/90 backdrop-blur-md border-2 border-pleo-blue shadow-sm hover:shadow-2xl transition-all duration-500"
+              className="keypoint-box group p-12 rounded-[3rem] bg-teal-100/90 backdrop-blur-md border-2 border-pleo-blue shadow-sm hover:shadow-2xl transition-all duration-500"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               <div className="w-20 h-20 bg-pleo-blue-light rounded-3xl flex items-center justify-center mb-8 text-pleo-blue-dark group-hover:bg-pleo-blue transition-all duration-500">

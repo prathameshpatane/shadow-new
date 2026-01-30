@@ -30,9 +30,9 @@ export const Footer: React.FC = () => {
               </div>
 
               <img
-                src="/logo.png"
+                src="/shad.jpeg"
                 alt="Shadow Infratech Logo"
-                className="h-25 w-auto object-contain"
+                className="h-20 w-auto object-contain"
               />
             </div>
 

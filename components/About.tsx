@@ -26,17 +26,15 @@ export const About: React.FC = () => {
 
         {/* ================= IMAGE LEFT + TEXT RIGHT ================= */}
         <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20">
-          {/* Image */}
           <div className="flex-1 animate-left-right">
             <img
-              src="/fam.jpg"
+              src="/ghar.jpeg"
               alt="Crafting the Future"
               className="w-full h-[420px] md:h-[520px] lg:h-[600px] object-cover
               transition-transform duration-1000 hover:scale-105"
             />
           </div>
 
-          {/* Text */}
           <div className="flex-1 flex flex-col justify-center text-center md:text-left space-y-6">
             <h4 className="text-3xl md:text-4xl font-serif text-pleo-text">
               Crafting the world’s finest developments
@@ -44,16 +42,13 @@ export const About: React.FC = () => {
 
             <p className="text-lg leading-relaxed text-gray-600 max-w-md md:max-w-lg mx-auto md:mx-0">
               Where every plot is thoughtfully designed with purpose, enduring
-              value, and a long-term vision that serves not just today, but
-              generations to come. We believe land is more than space — it is
-              the foundation for communities, growth, and legacy.
+              value, and a long-term vision that serves generations to come.
             </p>
           </div>
         </div>
 
         {/* ================= IMAGE RIGHT + TEXT LEFT ================= */}
         <div className="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
-          {/* Image */}
           <div className="flex-1 animate-right-left">
             <img
               src="/bg1.jpeg"
@@ -63,22 +58,20 @@ export const About: React.FC = () => {
             />
           </div>
 
-          {/* Text */}
           <div className="flex-1 flex flex-col justify-center text-center md:text-left space-y-6">
             <h4 className="text-3xl md:text-4xl font-serif text-pleo-text">
               Building Communities That Last
             </h4>
 
             <p className="text-lg leading-relaxed text-gray-600 max-w-md md:max-w-lg mx-auto md:mx-0">
-              Our vision extends beyond development. We create spaces where
-              people connect, investments grow, and communities flourish over
-              time — blending thoughtful planning with lasting value.
+              We create spaces where people connect, investments grow, and
+              communities flourish over time.
             </p>
           </div>
         </div>
       </div>
 
-      {/* ================= GLOBAL PRESENCE ================= */}
+      {/* ================= NEWS SECTION ================= */}
       <div className="mt-36 py-24 relative overflow-hidden">
         {/* Video Background */}
         <video
@@ -91,7 +84,6 @@ export const About: React.FC = () => {
           <source src="/green.mp4" type="video/mp4" />
         </video>
 
-        {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/60 z-10" />
 
         <div className="max-w-7xl mx-auto text-center space-y-14 relative z-20 px-4">
@@ -105,39 +97,47 @@ export const About: React.FC = () => {
             </h3>
           </div>
 
-          {/* ================= IMAGE + AUDIO ================= */}
+          {/* ================= AUDIO + IMAGES ================= */}
           <div className="max-w-6xl mx-auto">
             <div
-              className="grid md:grid-cols-2 gap-14 items-center
-              rounded-[3rem] p-12 bg-white/95 backdrop-blur-xl
-              shadow-2xl animate-slide-up animation-delay-400"
+              className="rounded-[3rem] p-12 bg-white/95 backdrop-blur-xl
+              shadow-2xl animate-slide-up animation-delay-400 space-y-10"
             >
-              {/* Image */}
-              <div className="rounded-[2.5rem] overflow-hidden shadow-xl">
-                <img
-                  src="/amar.jpg"
-                  alt="Global Presence"
-                  className="w-full h-full object-cover
-                  hover:scale-105 transition-transform duration-1000"
-                />
-              </div>
-
-              {/* Audio */}
-              <div className="flex flex-col justify-center text-left space-y-6">
+              {/* AUDIO AT TOP */}
+              <div className="space-y-6 text-left">
                 <h4 className="text-3xl md:text-4xl font-serif text-red-800">
-                  Listen to Our Global Story
+                  Listen to Our News
                 </h4>
 
-                <p className="text-gray-700 leading-relaxed text-lg">
-                  Discover how our journey has evolved from local beginnings to a
-                  global presence rooted in trust and excellence. Through
-                  strategic growth and meaningful partnerships, we continue
-                  shaping the future across borders.
+                <p className="text-gray-700 leading-relaxed text-lg max-w-3xl">
+                  Discover how our journey evolved from local beginnings to a
+                  global presence rooted in trust and excellence.
                 </p>
 
                 <audio controls className="w-full rounded-xl shadow-lg">
                   <source src="/audio.mp3" type="audio/mpeg" />
                 </audio>
+              </div>
+
+              {/* ONE IMAGE LEFT + ONE IMAGE RIGHT */}
+              <div className="grid md:grid-cols-2 gap-10 items-center">
+                <div className="rounded-[2.5rem] overflow-hidden shadow-xl">
+                  <img
+                    src="/amar.jpg"
+                    alt="News Left"
+                    className="w-full h-[380px] md:h-[420px] object-cover
+                    hover:scale-105 transition-transform duration-1000"
+                  />
+                </div>
+
+                <div className="rounded-[2.5rem] overflow-hidden shadow-xl">
+                  <img
+                    src="/news.jpeg"
+                    alt="News Right"
+                    className="w-full h-[380px] md:h-[420px] object-cover
+                    hover:scale-105 transition-transform duration-1000"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -167,7 +167,6 @@ export const About: React.FC = () => {
           }
         }
 
-        /* LEFT → RIGHT */
         @keyframes move-left-right {
           0% {
             transform: translateX(-40px);
@@ -180,7 +179,6 @@ export const About: React.FC = () => {
           }
         }
 
-        /* RIGHT → LEFT */
         @keyframes move-right-left {
           0% {
             transform: translateX(40px);

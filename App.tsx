@@ -14,6 +14,9 @@ import { LocationSection } from './components/LocationSection';
 import { Footer } from './components/Footer';
 import { Why } from "./components/Why";
 import { Gallery } from './components/Gallery';
+import AboutShadow from './pages/AboutShadow';
+import GalleryShadow from './pages/GalleryShadow';
+
 
 // Home Page
 const HomePage: React.FC<{ scrolled: boolean }> = ({ scrolled }) => (
@@ -30,7 +33,7 @@ const HomePage: React.FC<{ scrolled: boolean }> = ({ scrolled }) => (
       <Founders />
       <Testimonials />
       <EnquiryForm />
-      <LocationSection />
+     
     </main>
     <Footer />
   </div>
@@ -41,7 +44,7 @@ const AboutShadowPage: React.FC<{ scrolled: boolean }> = ({ scrolled }) => (
   <div className="min-h-screen font-sans selection:bg-pleo-blue selection:text-white">
     <Navbar scrolled={scrolled} />
     <main className="pt-24">
-    
+    <AboutShadow/>
       
     </main>
     <Footer />
@@ -68,14 +71,23 @@ const GalleryShadowPage: React.FC<{ scrolled: boolean }> = ({ scrolled }) => (
     <Navbar scrolled={scrolled} />
     <main className="pt-24">
       
-
+  <GalleryShadow/>
       <LocationSection/>
   
     </main>
     <Footer />
   </div>
 );
-
+const TeamShadowPage: React.FC<{ scrolled: boolean }> = ({ scrolled }) => (
+  <div className="min-h-screen font-sans selection:bg-pleo-blue selection:text-white">
+    <Navbar scrolled={scrolled} />
+    <main className="pt-24">
+    
+      <LocationSection />
+    </main>
+    <Footer />
+  </div>
+);
 // Contact Shadow Page
 const ContactShadowPage: React.FC<{ scrolled: boolean }> = ({ scrolled }) => (
   <div className="min-h-screen font-sans selection:bg-pleo-blue selection:text-white">
@@ -105,6 +117,7 @@ const AppContent: React.FC = () => {
       <Route path="/aboutshadow" element={<AboutShadowPage scrolled={scrolled} />} />
       <Route path="/projectsshadow" element={<ProjectsShadowPage scrolled={scrolled} />} />
       <Route path="/galleryshadow" element={<GalleryShadowPage scrolled={scrolled} />} />
+      <Route path="/teamshadow" element={<TeamShadowPage scrolled={scrolled} />} />
       <Route path="/contactshadow" element={<ContactShadowPage scrolled={scrolled} />} />
     </Routes>
   );
