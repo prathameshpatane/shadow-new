@@ -91,6 +91,17 @@ export const Keypoints: React.FC = () => {
             50% { transform: scale(1.05); }
           }
           .zoom-pulse { animation: zoomPulse 3s ease-in-out infinite; }
+
+          /* IMAGE FLOAT ANIMATION */
+          @keyframes move-left-right {
+            0% { transform: translateX(-40px); }
+            50% { transform: translateX(40px); }
+            100% { transform: translateX(-40px); }
+          }
+
+          .animate-left-right {
+            animation: move-left-right 3s ease-in-out infinite;
+          }
         `}</style>
 
         {/* Heading */}
@@ -122,7 +133,6 @@ export const Keypoints: React.FC = () => {
         </div>
       </div>
 
-      {/* Extra bottom padding */}
       <div className="h-32 w-full" />
     </section>
   );
@@ -134,16 +144,18 @@ export const Keypoints: React.FC = () => {
 export const Statistics: React.FC = () => {
   return (
     <section className="w-full flex flex-col md:flex-row mt-8 md:mt-0">
-      {/* IMAGE — FULL WIDTH / HEIGHT + extra bottom padding */}
+      {/* IMAGE */}
       <div className="w-full md:w-1/2 h-[60vh] md:h-screen overflow-hidden pb-16 md:pb-16">
         <img
           src="/lando.jpeg"
           alt="Land Development"
-          className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
+          className="w-full h-full object-cover
+          animate-left-right
+          transition-transform duration-1000 hover:scale-105"
         />
       </div>
 
-      {/* CONTENT — FULL HEIGHT */}
+      {/* CONTENT */}
       <div className="w-full md:w-1/2 flex items-center px-8 md:px-20 py-16 md:py-0 bg-white">
         <div className="space-y-6 max-w-xl">
           <h2 className="text-sm uppercase tracking-[0.4em] text-pleo-blue-dark font-bold">
@@ -154,9 +166,7 @@ export const Statistics: React.FC = () => {
           </h3>
           <p className="text-lg leading-relaxed text-gray-600">
             Every development we create is guided by long-term vision, sustainable
-            planning, and a commitment to quality. From infrastructure-ready plots
-            to thoughtfully planned communities, our projects are designed to
-            appreciate in value while enhancing the lives of those who invest in them.
+            planning, and a commitment to quality.
           </p>
           <p className="text-lg leading-relaxed text-gray-600">
             We don’t just develop land — we shape environments that foster growth,

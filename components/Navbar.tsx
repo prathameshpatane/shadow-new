@@ -31,7 +31,7 @@ export const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
         {/* Logo + Brand */}
         <Link
           to="/"
-          className={`flex items-center gap-4 font-serif font-bold tracking-tight uppercase ${textColorClass}`}
+          className={`flex items-center gap-2 font-serif font-bold tracking-tight uppercase ${textColorClass}`}
         >
           <img
             src="/logo.png"
@@ -39,7 +39,7 @@ export const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
             className="h-16 md:h-20 w-auto object-contain"
           />
           <span className="text-xl md:text-2xl">
-            Shadow Infratech
+            Shadow  Infratech  Pvt  Ltd
           </span>
         </Link>
 

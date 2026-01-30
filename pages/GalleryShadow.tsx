@@ -2,30 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const images: string[] = [
-  "/harvest_hills.png",
-  "/gulmohar_1.png",
-  "/hadapsar.png",
-  "/mission.png",
-  "/vision.png",
-  "/hadap.jpg",
-  "/loh.jpg",
-  "/sol.jpg",
-  "/harvest_1.png",
-  "/surnew.jpg",
-  "/citrine_city.png",
-  "/solvista.png",
-  "/imgone.jpg",
-  "/imgtwo.jpg",
-  "/imgthree.jpg",
-  "/kharadi.png",
-  "/mos.jpg",
-  "/moshi.png",
-  "/house.jpg",
-  "/gulmohar_vikas.png",
-  "/suraksha_enclave.png",
-  "/wag.jpg",
-  "/wagh.jpg",
-  "/waghol.jpeg",
+  "/gal1.jpeg",
+  "/gal2.jpeg",
+  "/gal3.jpeg",
+  "/gal4.jpeg",
+  "/gal5.jpeg",
+  "/gal6.jpeg",
+  "/gal7.jpeg",
+ 
 ];
 
 const containerVariants = {
@@ -49,10 +33,10 @@ const GalleryShadow: React.FC = () => {
       {/* Heading */}
       <div className="max-w-7xl mx-auto text-center mb-12">
         <h2 className="text-3xl md:text-5xl font-extrabold text-gray-800">
-          Our Property Gallery
+          Our Gallery
         </h2>
         <p className="mt-4 text-gray-600 text-base md:text-lg">
-          Explore premium real estate spaces crafted for modern living
+          Explore our team responsible for modern living spaces.
         </p>
       </div>
 
@@ -84,10 +68,10 @@ const GalleryShadow: React.FC = () => {
             {/* Text Overlay */}
             <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
               <h3 className="text-white text-lg font-semibold">
-                Luxury Property
+                Team
               </h3>
               <p className="text-gray-200 text-sm">
-                Prime Location • Modern Design
+                Shadow Infratech Pvt Ltd
               </p>
             </div>
           </motion.div>

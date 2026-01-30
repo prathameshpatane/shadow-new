@@ -4,6 +4,8 @@ const leadershipImages = [
   "/aboutone.png",
   "/abouttwo.png",
   "/aboutthree.png",
+  "/fame.jpeg",
+
 ];
 
 /* duplicate for seamless loop */

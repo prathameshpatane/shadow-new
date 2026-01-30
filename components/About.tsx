@@ -4,7 +4,7 @@ export const About: React.FC = () => {
   return (
     <section id="about" className="py-24 md:py-32 px-6 overflow-hidden">
       {/* ================= KEY LOCATIONS ================= */}
-      <div className="max-w-7xl mx-auto space-y-20">
+      <div className="max-w-7xl mx-auto space-y-24">
         {/* Heading */}
         <div className="relative text-center space-y-4">
           <span
@@ -24,29 +24,55 @@ export const About: React.FC = () => {
           </h3>
         </div>
 
-        {/* ================= IMAGE LEFT + TEXT RIGHT (CENTERED) ================= */}
-        <div className="flex flex-col md:flex-row items-center md:items-center gap-10 md:gap-20">
-          {/* Left Image */}
-          <div className="flex-1">
+        {/* ================= IMAGE LEFT + TEXT RIGHT ================= */}
+        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20">
+          {/* Image */}
+          <div className="flex-1 animate-left-right">
             <img
               src="/fam.jpg"
               alt="Crafting the Future"
               className="w-full h-[420px] md:h-[520px] lg:h-[600px] object-cover
-              transition-transform duration-1000 group-hover:scale-105"
+              transition-transform duration-1000 hover:scale-105"
             />
           </div>
 
-          {/* Right Text */}
+          {/* Text */}
           <div className="flex-1 flex flex-col justify-center text-center md:text-left space-y-6">
-            <h4 className="text-3xl md:text-4xl lg:text-4xl font-serif text-pleo-text">
+            <h4 className="text-3xl md:text-4xl font-serif text-pleo-text">
               Crafting the world’s finest developments
             </h4>
 
-            <p className="text-lg leading-relaxed text-gray-600 max-w-md md:max-w-lg">
+            <p className="text-lg leading-relaxed text-gray-600 max-w-md md:max-w-lg mx-auto md:mx-0">
               Where every plot is thoughtfully designed with purpose, enduring
               value, and a long-term vision that serves not just today, but
               generations to come. We believe land is more than space — it is
               the foundation for communities, growth, and legacy.
+            </p>
+          </div>
+        </div>
+
+        {/* ================= IMAGE RIGHT + TEXT LEFT ================= */}
+        <div className="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
+          {/* Image */}
+          <div className="flex-1 animate-right-left">
+            <img
+              src="/bg1.jpeg"
+              alt="Building Communities"
+              className="w-full h-[420px] md:h-[520px] lg:h-[600px] object-cover
+              transition-transform duration-1000 hover:scale-105"
+            />
+          </div>
+
+          {/* Text */}
+          <div className="flex-1 flex flex-col justify-center text-center md:text-left space-y-6">
+            <h4 className="text-3xl md:text-4xl font-serif text-pleo-text">
+              Building Communities That Last
+            </h4>
+
+            <p className="text-lg leading-relaxed text-gray-600 max-w-md md:max-w-lg mx-auto md:mx-0">
+              Our vision extends beyond development. We create spaces where
+              people connect, investments grow, and communities flourish over
+              time — blending thoughtful planning with lasting value.
             </p>
           </div>
         </div>
@@ -70,11 +96,11 @@ export const About: React.FC = () => {
 
         <div className="max-w-7xl mx-auto text-center space-y-14 relative z-20 px-4">
           <div className="space-y-4">
-            <h2 className="text-sm uppercase tracking-widest text-white font-bold animate-slide-text drop-shadow-lg">
+            <h2 className="text-sm uppercase tracking-widest text-white font-bold animate-slide-text">
               News
             </h2>
 
-            <h3 className="text-4xl md:text-5xl font-serif text-white animate-slide-text animation-delay-200 drop-shadow-2xl">
+            <h3 className="text-4xl md:text-5xl font-serif text-white animate-slide-text animation-delay-200">
               Our Headlines
             </h3>
           </div>
@@ -105,14 +131,12 @@ export const About: React.FC = () => {
                 <p className="text-gray-700 leading-relaxed text-lg">
                   Discover how our journey has evolved from local beginnings to a
                   global presence rooted in trust and excellence. Through
-                  strategic growth, meaningful partnerships, and a deep
-                  understanding of diverse markets, we continue shaping the
-                  future across borders.
+                  strategic growth and meaningful partnerships, we continue
+                  shaping the future across borders.
                 </p>
 
                 <audio controls className="w-full rounded-xl shadow-lg">
                   <source src="/audio.mp3" type="audio/mpeg" />
-                  Your browser does not support the audio element.
                 </audio>
               </div>
             </div>
@@ -143,6 +167,32 @@ export const About: React.FC = () => {
           }
         }
 
+        /* LEFT → RIGHT */
+        @keyframes move-left-right {
+          0% {
+            transform: translateX(-40px);
+          }
+          50% {
+            transform: translateX(40px);
+          }
+          100% {
+            transform: translateX(-40px);
+          }
+        }
+
+        /* RIGHT → LEFT */
+        @keyframes move-right-left {
+          0% {
+            transform: translateX(40px);
+          }
+          50% {
+            transform: translateX(-40px);
+          }
+          100% {
+            transform: translateX(40px);
+          }
+        }
+
         .animate-slide-text {
           animation: slide-text 3s ease-in-out infinite;
         }
@@ -150,6 +200,14 @@ export const About: React.FC = () => {
         .animate-slide-up {
           animation: slide-up 0.8s ease-out forwards;
           opacity: 0;
+        }
+
+        .animate-left-right {
+          animation: move-left-right 3s ease-in-out infinite;
+        }
+
+        .animate-right-left {
+          animation: move-right-left 3s ease-in-out infinite;
         }
 
         .animation-delay-200 {
