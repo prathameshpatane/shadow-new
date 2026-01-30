@@ -55,22 +55,21 @@ export const Keypoints: React.FC = () => {
       },
       { threshold: 0.15 }
     );
-
     const boxes = gridRef.current?.querySelectorAll(".keypoint-box");
     boxes?.forEach((el) => observer.observe(el));
-
     return () => observer.disconnect();
   }, []);
 
   return (
     <section
       id="why-shadow"
-      className="relative py-24 px-6 bg-cover bg-center bg-no-repeat"
+      className="relative px-6 py-24 min-h-[100vh] bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/prop.jpg')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40" />
 
+      {/* Main content */}
       <div className="max-w-7xl mx-auto relative z-10">
         <style>{`
           .keypoint-box {
@@ -86,16 +85,12 @@ export const Keypoints: React.FC = () => {
             60% { transform: translateY(4px) scale(0.99); }
             100% { transform: translateY(0) scale(1); }
           }
-          .keypoint-box:hover {
-            animation: hoverBounce 0.6s ease;
-          }
+          .keypoint-box:hover { animation: hoverBounce 0.6s ease; }
           @keyframes zoomPulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
           }
-          .zoom-pulse {
-            animation: zoomPulse 3s ease-in-out infinite;
-          }
+          .zoom-pulse { animation: zoomPulse 3s ease-in-out infinite; }
         `}</style>
 
         {/* Heading */}
@@ -103,7 +98,7 @@ export const Keypoints: React.FC = () => {
           <h2 className="text-sm uppercase tracking-[0.4em] text-white font-bold">
             The Distinction
           </h2>
-          <h3 className="text-4xl md:text-6xl font-serif text-white zoom-pulse hover:text-blue-300 transition-colors duration-300 cursor-pointer">
+          <h3 className="text-4xl md:text-6xl font-serif text-white zoom-pulse">
             Our Core Qualities
           </h3>
         </div>
@@ -119,38 +114,56 @@ export const Keypoints: React.FC = () => {
               <div className="w-20 h-20 bg-pleo-blue-light rounded-3xl flex items-center justify-center mb-8 text-pleo-blue-dark group-hover:bg-pleo-blue transition-all duration-500">
                 {point.icon}
               </div>
-
-              <h4 className="text-2xl font-bold mb-4 text-pleo-text">
-                {point.title}
-              </h4>
-
-              <p className="text-pleo-text text-lg leading-relaxed">
-                {point.desc}
-              </p>
-
+              <h4 className="text-2xl font-bold mb-4 text-pleo-text">{point.title}</h4>
+              <p className="text-pleo-text text-lg leading-relaxed">{point.desc}</p>
               <div className="mt-8 h-1 w-0 bg-pleo-blue group-hover:w-16 transition-all duration-700 rounded-full" />
             </div>
           ))}
         </div>
       </div>
+
+      {/* Extra bottom padding */}
+      <div className="h-32 w-full" />
     </section>
   );
 };
 
 /* =========================
-   STATISTICS COMPONENT (FULL IMAGE)
+   STATISTICS COMPONENT
 ========================= */
 export const Statistics: React.FC = () => {
   return (
-    <section
-      className="relative min-h-screen w-full bg-cover bg-center overflow-hidden"
-      style={{ backgroundImage: "url('/lando.jpeg')" }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30" />
+    <section className="w-full flex flex-col md:flex-row mt-8 md:mt-0">
+      {/* IMAGE — FULL WIDTH / HEIGHT + extra bottom padding */}
+      <div className="w-full md:w-1/2 h-[60vh] md:h-screen overflow-hidden pb-16 md:pb-16">
+        <img
+          src="/lando.jpeg"
+          alt="Land Development"
+          className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
+        />
+      </div>
 
-      {/* Empty container – keeps height */}
-      <div className="relative z-10 h-full w-full" />
+      {/* CONTENT — FULL HEIGHT */}
+      <div className="w-full md:w-1/2 flex items-center px-8 md:px-20 py-16 md:py-0 bg-white">
+        <div className="space-y-6 max-w-xl">
+          <h2 className="text-sm uppercase tracking-[0.4em] text-pleo-blue-dark font-bold">
+            Our Impact
+          </h2>
+          <h3 className="text-4xl md:text-5xl font-serif text-pleo-text">
+            Building Landmarks That Endure
+          </h3>
+          <p className="text-lg leading-relaxed text-gray-600">
+            Every development we create is guided by long-term vision, sustainable
+            planning, and a commitment to quality. From infrastructure-ready plots
+            to thoughtfully planned communities, our projects are designed to
+            appreciate in value while enhancing the lives of those who invest in them.
+          </p>
+          <p className="text-lg leading-relaxed text-gray-600">
+            We don’t just develop land — we shape environments that foster growth,
+            security, and generational prosperity.
+          </p>
+        </div>
+      </div>
     </section>
   );
 };

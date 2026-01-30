@@ -9,7 +9,7 @@ export const About: React.FC = () => {
         <div className="relative text-center space-y-4">
           <span
             className="absolute inset-0 flex items-center justify-center
-            text-[14rem] md:text-[18rem]
+            text-[12rem] md:text-[18rem]
             font-serif font-bold
             text-pleo-blue
             opacity-90
@@ -19,38 +19,35 @@ export const About: React.FC = () => {
             24
           </span>
 
-          <h2 className="text-sm uppercase tracking-[0.4em] text-pleo-blue-dark font-bold">
-            Our Purpose
-          </h2>
-
           <h3 className="text-4xl md:text-5xl font-serif text-pleo-text">
-          Giving Land a Future.
+            Giving Land a Future.
           </h3>
         </div>
 
-        {/* ================= BIG IMAGE (ENLARGED) ================= */}
-        <div className="flex justify-center">
-          <div
-            className="relative w-full max-w-[90rem]
-            h-[520px] md:h-[680px] lg:h-[760px]
-            rounded-[4rem] overflow-hidden
-            shadow-2xl group transition-all duration-700"
-          >
+        {/* ================= IMAGE LEFT + TEXT RIGHT (CENTERED) ================= */}
+        <div className="flex flex-col md:flex-row items-center md:items-center gap-10 md:gap-20">
+          {/* Left Image */}
+          <div className="flex-1">
             <img
               src="/fam.jpg"
-              alt="Presence Across India"
-              className="w-full h-full object-cover
-              group-hover:scale-105 transition-transform duration-1000"
+              alt="Crafting the Future"
+              className="w-full h-[420px] md:h-[520px] lg:h-[600px] object-cover
+              transition-transform duration-1000 group-hover:scale-105"
             />
+          </div>
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end">
-              <h4
-                className="text-white text-3xl md:text-4xl lg:text-3xl
-                font-serif font-light w-full p-10 text-center drop-shadow-2xl"
-              >
-                Crafting the world’s finest developments—where every plot is designed with purpose, value, and a vision for generations
-              </h4>
-            </div>
+          {/* Right Text */}
+          <div className="flex-1 flex flex-col justify-center text-center md:text-left space-y-6">
+            <h4 className="text-3xl md:text-4xl lg:text-4xl font-serif text-pleo-text">
+              Crafting the world’s finest developments
+            </h4>
+
+            <p className="text-lg leading-relaxed text-gray-600 max-w-md md:max-w-lg">
+              Where every plot is thoughtfully designed with purpose, enduring
+              value, and a long-term vision that serves not just today, but
+              generations to come. We believe land is more than space — it is
+              the foundation for communities, growth, and legacy.
+            </p>
           </div>
         </div>
       </div>
@@ -107,11 +104,10 @@ export const About: React.FC = () => {
 
                 <p className="text-gray-700 leading-relaxed text-lg">
                   Discover how our journey has evolved from local beginnings to a
-                  global presence rooted in trust and excellence. Through strategic
-                  growth, meaningful partnerships, and a deep understanding of
-                  diverse markets, we have expanded our footprint across borders.
-                  Our commitment to quality, transparency, and innovation continues
-                  to shape lasting relationships worldwide.
+                  global presence rooted in trust and excellence. Through
+                  strategic growth, meaningful partnerships, and a deep
+                  understanding of diverse markets, we continue shaping the
+                  future across borders.
                 </p>
 
                 <audio controls className="w-full rounded-xl shadow-lg">

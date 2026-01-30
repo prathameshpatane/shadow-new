@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -20,10 +19,28 @@ export const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
   const textColorClass = scrolled ? 'text-pleo-text' : 'text-white';
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'py-4 glass border-b border-pleo-blue/20 shadow-sm' : 'py-6 bg-transparent'}`}>
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className={`text-xl md:text-2xl font-serif font-bold tracking-tight uppercase transition-colors duration-300 ${textColorClass}`}>
-          Shadow Infratech
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-white/70 backdrop-blur-lg border-b border-pleo-blue/20 shadow-sm'
+          : 'bg-transparent'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 h-[96px] flex justify-between items-center">
+        
+        {/* Logo + Brand */}
+        <Link
+          to="/"
+          className={`flex items-center gap-4 font-serif font-bold tracking-tight uppercase ${textColorClass}`}
+        >
+          <img
+            src="/logo.png"
+            alt="Shadow Infratech Logo"
+            className="h-16 md:h-20 w-auto object-contain"
+          />
+          <span className="text-xl md:text-2xl">
+            Shadow Infratech
+          </span>
         </Link>
 
         {/* Desktop Nav */}
@@ -40,8 +57,8 @@ export const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
         </div>
 
         {/* Mobile Toggle */}
-        <button 
-          className={`md:hidden p-2 rounded-lg transition-colors duration-300 ${textColorClass}`} 
+        <button
+          className={`md:hidden p-2 rounded-lg transition-colors duration-300 ${textColorClass}`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
