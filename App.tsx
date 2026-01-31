@@ -16,6 +16,7 @@ import { Why } from "./components/Why";
 import { Gallery } from './components/Gallery';
 import AboutShadow from './pages/AboutShadow';
 import GalleryShadow from './pages/GalleryShadow';
+import { TeamShadow } from './pages/TeamShadow';
 
 
 // Home Page
@@ -82,7 +83,7 @@ const TeamShadowPage: React.FC<{ scrolled: boolean }> = ({ scrolled }) => (
   <div className="min-h-screen font-sans selection:bg-pleo-blue selection:text-white">
     <Navbar scrolled={scrolled} />
     <main className="pt-24">
-    
+    <TeamShadow/>
       <LocationSection />
     </main>
     <Footer />

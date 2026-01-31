@@ -6,13 +6,13 @@ const projects = [
     id: 1,
     title: "Harvest Hills",
     category: " ",
-    image: "/imgone.jpg",
+    image: "/harv.jpg",
   },
   {
     id: 2,
     title: "VSG Suraksha Enclave",
     category: "",
-    image: "/imgtwo.jpg",
+    image: "/vsg.jpg",
   },
 ];
 

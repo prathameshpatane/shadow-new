@@ -19,9 +19,7 @@ export const About: React.FC = () => {
             24
           </span>
 
-          <h3 className="text-4xl md:text-5xl font-serif text-pleo-text">
-            Giving Land a Future.
-          </h3>
+          <br />
         </div>
 
         {/* ================= IMAGE LEFT + TEXT RIGHT ================= */}
@@ -36,9 +34,9 @@ export const About: React.FC = () => {
           </div>
 
           <div className="flex-1 flex flex-col justify-center text-center md:text-left space-y-6">
-            <h4 className="text-3xl md:text-4xl font-serif text-pleo-text">
-              Crafting the world’s finest developments
-            </h4>
+            <h3 className="text-4xl md:text-5xl font-serif text-pleo-text">
+              Giving Land a Future.
+            </h3>
 
             <p className="text-lg leading-relaxed text-gray-600 max-w-md md:max-w-lg mx-auto md:mx-0">
               Where every plot is thoughtfully designed with purpose, enduring
@@ -103,39 +101,38 @@ export const About: React.FC = () => {
               className="rounded-[3rem] p-12 bg-white/95 backdrop-blur-xl
               shadow-2xl animate-slide-up animation-delay-400 space-y-10"
             >
-              {/* AUDIO AT TOP */}
-              <div className="space-y-6 text-left">
-                <h4 className="text-3xl md:text-4xl font-serif text-red-800">
-                  Listen to Our News
-                </h4>
+              {/* AUDIO AND TEXT SIDE BY SIDE */}
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+                <div className="flex-1 text-left space-y-6">
+                  <h4 className="text-3xl md:text-4xl font-serif text-red-800">
+                    Listen to Our News
+                  </h4>
+                </div>
 
-                <p className="text-gray-700 leading-relaxed text-lg max-w-3xl">
-                  Discover how our journey evolved from local beginnings to a
-                  global presence rooted in trust and excellence.
-                </p>
-
-                <audio controls className="w-full rounded-xl shadow-lg">
-                  <source src="/audio.mp3" type="audio/mpeg" />
-                </audio>
+                <div className="flex-1">
+                  <audio controls className="w-full rounded-xl shadow-lg">
+                    <source src="/audio.mp3" type="audio/mpeg" />
+                  </audio>
+                </div>
               </div>
 
               {/* ONE IMAGE LEFT + ONE IMAGE RIGHT */}
               <div className="grid md:grid-cols-2 gap-10 items-center">
-                <div className="rounded-[2.5rem] overflow-hidden shadow-xl">
+                <div className="rounded-[2.5rem] overflow-hidden shadow-xl bg-gray-100 flex items-center justify-center">
                   <img
                     src="/amar.jpg"
                     alt="News Left"
-                    className="w-full h-[380px] md:h-[420px] object-cover
-                    hover:scale-105 transition-transform duration-1000"
+                    className="w-full h-[380px] md:h-[420px] object-contain
+                    transition-transform duration-700 hover:scale-105"
                   />
                 </div>
 
-                <div className="rounded-[2.5rem] overflow-hidden shadow-xl">
+                <div className="rounded-[2.5rem] overflow-hidden shadow-xl bg-gray-100 flex items-center justify-center">
                   <img
                     src="/news.jpeg"
                     alt="News Right"
-                    className="w-full h-[380px] md:h-[420px] object-cover
-                    hover:scale-105 transition-transform duration-1000"
+                    className="w-full h-[380px] md:h-[420px] object-contain
+                    transition-transform duration-700 hover:scale-105"
                   />
                 </div>
               </div>
@@ -147,74 +144,33 @@ export const About: React.FC = () => {
       {/* ================= ANIMATIONS ================= */}
       <style jsx>{`
         @keyframes slide-text {
-          0%,
-          100% {
-            transform: translateX(-20px);
-          }
-          50% {
-            transform: translateX(20px);
-          }
+          0%, 100% { transform: translateX(-20px); }
+          50% { transform: translateX(20px); }
         }
 
         @keyframes slide-up {
-          from {
-            opacity: 0;
-            transform: translateY(50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          from { opacity: 0; transform: translateY(50px); }
+          to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes move-left-right {
-          0% {
-            transform: translateX(-40px);
-          }
-          50% {
-            transform: translateX(40px);
-          }
-          100% {
-            transform: translateX(-40px);
-          }
+          0% { transform: translateX(-40px); }
+          50% { transform: translateX(40px); }
+          100% { transform: translateX(-40px); }
         }
 
         @keyframes move-right-left {
-          0% {
-            transform: translateX(40px);
-          }
-          50% {
-            transform: translateX(-40px);
-          }
-          100% {
-            transform: translateX(40px);
-          }
+          0% { transform: translateX(40px); }
+          50% { transform: translateX(-40px); }
+          100% { transform: translateX(40px); }
         }
 
-        .animate-slide-text {
-          animation: slide-text 3s ease-in-out infinite;
-        }
-
-        .animate-slide-up {
-          animation: slide-up 0.8s ease-out forwards;
-          opacity: 0;
-        }
-
-        .animate-left-right {
-          animation: move-left-right 3s ease-in-out infinite;
-        }
-
-        .animate-right-left {
-          animation: move-right-left 3s ease-in-out infinite;
-        }
-
-        .animation-delay-200 {
-          animation-delay: 0.2s;
-        }
-
-        .animation-delay-400 {
-          animation-delay: 0.4s;
-        }
+        .animate-slide-text { animation: slide-text 3s ease-in-out infinite; }
+        .animate-slide-up { animation: slide-up 0.8s ease-out forwards; opacity: 0; }
+        .animate-left-right { animation: move-left-right 3s ease-in-out infinite; }
+        .animate-right-left { animation: move-right-left 3s ease-in-out infinite; }
+        .animation-delay-200 { animation-delay: 0.2s; }
+        .animation-delay-400 { animation-delay: 0.4s; }
       `}</style>
     </section>
   );
