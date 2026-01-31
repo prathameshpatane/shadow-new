@@ -6,7 +6,7 @@ const projects = [
     id: 1,
     title: "Harvest Hills",
     category: " ",
-    image: "/harv.jpg",
+    image: "/vest.jpeg",
   },
   {
     id: 2,

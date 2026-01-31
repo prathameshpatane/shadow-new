@@ -22,7 +22,7 @@ const AboutShadow: React.FC = () => {
       <section className="relative h-[90vh] w-full overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center brightness-110 saturate-110"
-          style={{ backgroundImage: "url('/abt.jpg')" }}
+          style={{ backgroundImage: "url('/abtt.jpeg')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/15 to-black/0" />
       </section>
@@ -134,7 +134,7 @@ const AboutShadow: React.FC = () => {
                 className="rounded-[3rem] overflow-hidden shadow-2xl order-1 lg:order-2"
               >
                 <img
-                  src="/abt4.jpg"
+                  src="/vis.jpeg"
                   alt="Our Vision"
                   className="w-full h-[640px] object-cover"
                 />

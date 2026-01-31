@@ -8,19 +8,19 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Amar Tarange",
+    name: "Mr. Amar Tarange",
     designation: "Co-Founder & CEO",
-    photo: "/found1.jpg",
+    photo: "/ceo.jpeg",
   },
   {
-    name: "Sagar Tarange",
+    name: "Mr. Sagar Tarange",
     designation: "Managing Director",
     photo: "/found2.jpg",
   },
   {
-    name: "Sachin Ahivale",
+    name: "Mr. Sachin Ahivale",
     designation: "General Manager",
-    photo: "/found3.jpg",
+    photo: "/sachin.jpeg",
   },
 ];
 
