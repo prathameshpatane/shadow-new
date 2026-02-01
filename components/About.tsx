@@ -18,7 +18,6 @@ export const About: React.FC = () => {
           >
             24
           </span>
-
           <br />
         </div>
 
@@ -95,15 +94,14 @@ export const About: React.FC = () => {
             </h3>
           </div>
 
-          {/* ================= AUDIO + IMAGES ================= */}
           <div className="max-w-6xl mx-auto">
             <div
               className="rounded-[3rem] p-12 bg-white/95 backdrop-blur-xl
-              shadow-2xl animate-slide-up animation-delay-400 space-y-10"
+              shadow-2xl animate-slide-up animation-delay-400 space-y-14"
             >
-              {/* AUDIO AND TEXT SIDE BY SIDE */}
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-                <div className="flex-1 text-left space-y-6">
+              {/* ================= AUDIO ================= */}
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="flex-1 text-left space-y-4">
                   <h4 className="text-3xl md:text-4xl font-serif text-red-800">
                     Listen to Our News
                   </h4>
@@ -116,9 +114,33 @@ export const About: React.FC = () => {
                 </div>
               </div>
 
-              {/* ONE IMAGE LEFT + ONE IMAGE RIGHT */}
+              {/* ================= IMAGE LEFT + DESCRIPTION RIGHT ================= */}
+              <div className="flex flex-col md:flex-row items-center gap-10">
+                {/* Image */}
+                <div className="flex-1 rounded-[2.5rem] overflow-hidden shadow-xl bg-gray-100">
+                  <img
+                    src="/celeb.jpg"
+                    alt="News Detail"
+                    className="w-full h-[360px] md:h-[420px] object-cover
+                    transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+
+                {/* Text */}
+                <div className="flex-1 text-left space-y-6">
+                  <h4 className="text-3xl md:text-4xl font-serif text-blue-800">
+                    Awarded for Business Titans of the year- Abu Dhabi
+                  </h4>
+
+                  <p className="text-lg leading-relaxed text-black-600">
+                    Amar Digambar Tarange was honored at the Radio City Business Titans Awards held from 19–21 July at Yas Island, Abu Dhabi. He received the award for “Excellence in NA Plots Development” as Founder and Director of Shadow Infratech Pvt Ltd, recognizing his leadership and contribution to real estate and infrastructure development.
+                  </p>
+                </div>
+              </div>
+
+              {/* ================= TWO IMAGES ================= */}
               <div className="grid md:grid-cols-2 gap-10 items-center">
-                <div className="rounded-[2.5rem] overflow-hidden shadow-xl bg-gray-100 flex items-center justify-center">
+                <div className="rounded-[2.5rem] overflow-hidden shadow-xl bg-gray-100">
                   <img
                     src="/amar.jpg"
                     alt="News Left"
@@ -127,7 +149,7 @@ export const About: React.FC = () => {
                   />
                 </div>
 
-                <div className="rounded-[2.5rem] overflow-hidden shadow-xl bg-gray-100 flex items-center justify-center">
+                <div className="rounded-[2.5rem] overflow-hidden shadow-xl bg-gray-100">
                   <img
                     src="/news.jpeg"
                     alt="News Right"

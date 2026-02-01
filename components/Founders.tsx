@@ -2,7 +2,7 @@ import React from "react";
 
 const leadershipImages = [
   "/aboutone.png",
-  "/abouttwo.png",
+  "/titan.jpg",
   "/aboutthree.png",
   "/fame.jpeg",
 

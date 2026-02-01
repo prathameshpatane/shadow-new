@@ -13,7 +13,7 @@ const teamMembers: TeamMember[] = [
     photo: "/ceo.jpeg",
   },
   {
-    name: "Late. Sagar Tarange",
+    name: "Late Mr. Sagar Tarange",
     designation: "Managing Director",
     photo: "/found2.jpg",
   },

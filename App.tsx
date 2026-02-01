@@ -18,6 +18,8 @@ import AboutShadow from './pages/AboutShadow';
 import GalleryShadow from './pages/GalleryShadow';
 import { TeamShadow } from './pages/TeamShadow';
 import ProjectShadow from './pages/ProjectShadow';
+import ScrollToTop from './components/ScrollToTop';
+import EnquireShadow from './pages/EnquireShadow';
 
 
 // Home Page
@@ -92,8 +94,7 @@ const ContactShadowPage: React.FC<{ scrolled: boolean }> = ({ scrolled }) => (
   <div className="min-h-screen font-sans selection:bg-pleo-blue selection:text-white">
     <Navbar scrolled={scrolled} />
     <main className="pt-24">
-      <EnquiryForm />
-      <LocationSection />
+      <EnquireShadow/>
     </main>
     <Footer />
   </div>
@@ -117,7 +118,7 @@ const AppContent: React.FC = () => {
       <Route path="/projectsshadow" element={<ProjectsShadowPage scrolled={scrolled} />} />
       <Route path="/galleryshadow" element={<GalleryShadowPage scrolled={scrolled} />} />
       <Route path="/teamshadow" element={<TeamShadowPage scrolled={scrolled} />} />
-      <Route path="/contactshadow" element={<ContactShadowPage scrolled={scrolled} />} />
+      <Route path="/enquireshadow" element={<ContactShadowPage scrolled={scrolled} />} />
     </Routes>
   );
 };
@@ -125,7 +126,7 @@ const AppContent: React.FC = () => {
 const App: React.FC = () => {
   return (
     <Router>
-
+<ScrollToTop/>
       <AppContent />
     </Router>
   );

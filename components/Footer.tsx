@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Facebook,
   Youtube,
@@ -12,21 +12,21 @@ import {
   Camera,
   Mail,
   Clock,
-} from 'lucide-react';
+} from "lucide-react";
 
 export const Footer: React.FC = () => {
   return (
     <footer className="bg-pleo-text text-white py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-12 mb-20">
+
+        {/* Top Section */}
+        <div className="grid md:grid-cols-4 gap-12 mb-2">
 
           {/* Brand + Description */}
-          <div className="col-span-2 space-y-8">
-
-            {/* Brand name with logo below */}
-            <div className="flex flex-col items-start gap-4">
+          <div className="col-span-2">
+            <div className="flex flex-col items-start gap-4 mb-6">
               <div className="text-3xl font-serif font-bold tracking-widest text-white">
-                SHADOW INFRATECH
+                SHADOW INFRATECH PVT LTD
               </div>
 
               <img
@@ -36,21 +36,22 @@ export const Footer: React.FC = () => {
               />
             </div>
 
-            <p className="text-white/70 max-w-sm leading-relaxed font-light text-lg">
+            <p className="text-white/70 max-w-sm leading-relaxed font-light text-lg mb-6">
               NA plots in Pune – ideal for residential and investment purposes.
               Discover well-developed plots with great amenities in prime
               locations.
             </p>
 
+            {/* Social Icons */}
             <div className="flex gap-4">
-              <a className="group p-5 bg-white/10 rounded-full hover:bg-pleo-blue transition-all duration-300 hover:scale-110">
-                <Facebook className="w-5 h-5 group-hover:text-white" />
+              <a className="group p-4 bg-white/10 rounded-full hover:bg-pleo-blue transition-all duration-300 hover:scale-110">
+                <Facebook className="w-3 h-3 group-hover:text-white" />
               </a>
-              <a className="group p-5 bg-white/10 rounded-full hover:bg-red-600 transition-all duration-300 hover:scale-110">
-                <Youtube className="w-5 h-5 group-hover:text-white" />
+              <a className="group p-4 bg-white/10 rounded-full hover:bg-red-600 transition-all duration-300 hover:scale-110">
+                <Youtube className="w-3 h-3 group-hover:text-white" />
               </a>
-              <a className="group p-5 bg-white/10 rounded-full hover:bg-pink-600 transition-all duration-300 hover:scale-110">
-                <Instagram className="w-5 h-5 group-hover:text-white" />
+              <a className="group p-4 bg-white/10 rounded-full hover:bg-pink-600 transition-all duration-300 hover:scale-110">
+                <Instagram className="w-3 h-3 group-hover:text-white" />
               </a>
             </div>
           </div>
@@ -138,6 +139,7 @@ export const Footer: React.FC = () => {
             <a className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
+
       </div>
     </footer>
   );
