@@ -2,6 +2,24 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const images: string[] = [
+  "/famefirst.jpg",
+  "/famesec.jpg",
+  "/ph1.jpg",
+  "/ph2.jpg",
+  "/ph3.jpg",
+  "/ph4.jpg",
+  "/ph5.jpg",
+  "/ph6.jpg",
+  "/ph7.jpg",
+  "/ph8.jpg",
+  "/ph9.jpg",
+  "/ph10.jpg",
+  "/ph11.jpg",
+  "/ph12.jpg",
+  "/ph13.jpg",
+  "/ph14.jpg",
+  "/ph15.jpg",
+  "/ph16.jpg",
   "/gal1.jpeg",
   "/gal2.jpeg",
   "/gal3.jpeg",
@@ -15,9 +33,7 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.08,
-    },
+    transition: { staggerChildren: 0.08 },
   },
 };
 
@@ -29,7 +45,7 @@ const itemVariants = {
 const GalleryShadow: React.FC = () => {
   return (
     <section className="w-full py-16 px-4 md:px-10 bg-gray-50">
-      {/* Heading */}
+      {/* ================= HEADING ================= */}
       <div className="max-w-7xl mx-auto text-center mb-12">
         <h2 className="text-3xl md:text-5xl font-extrabold text-gray-800">
           Our Gallery
@@ -40,7 +56,16 @@ const GalleryShadow: React.FC = () => {
       </div>
 
       {/* ================= VIDEOS SECTION ================= */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        {/* MP4 Video 0 (NEW – before YouTube) */}
+        <div className="relative w-full aspect-video overflow-hidden rounded-2xl shadow-xl bg-black">
+          <video
+            className="w-full h-full object-cover"
+            src="/spec.mp4"
+            controls
+          />
+        </div>
+
         {/* YouTube Video */}
         <div className="relative w-full aspect-video overflow-hidden rounded-2xl shadow-xl bg-black">
           <iframe

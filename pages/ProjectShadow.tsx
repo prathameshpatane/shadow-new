@@ -7,6 +7,7 @@ interface Project {
   name: string;
   location: string;
   description: string;
+  link?: string;
 }
 
 // ---------------- ONGOING PROJECTS ----------------
@@ -17,31 +18,27 @@ const ongoingProjects: Project[] = [
     location: "Kanhe-Phata, PMRDA",
     description:
       "VSG Suraksha Enclave, a thoughtfully planned NA plots project spread across 12.5 acres of serene, pollution-free landscape. Strategically located and RERA-approved with PMRDA sanction, this premium development offers a rare opportunity to own legally clear and future-ready land in a fast-developing zone.",
+    link: "https://www.vsgsurakshaenclave.com/",
   },
   {
-    photo: "/vest.jpeg",
-    name: "Harvest Hills",
+    photo: "/hills.jpg",
+    name: "Haarvest Hills",
     location: "Rajgad (Velhe)",
     description:
       "Haarvest Hills, featuring 25-acre, 96-acre, and 8-acre land parcels—a jewel within Rajgad (Velhe), now available for discerning investors and homeowners. With expansive opportunities for custom farmhouse development and significant appreciation potential, this offering is your gateway to a lifestyle in harmony with nature.",
+    link: "https://raynovaagri.com/farmhouse-plots/",
   },
 ];
 
 // ---------------- COMPLETED PROJECTS ----------------
 const completedProjects: Project[] = [
   {
-    photo: "/vista.jpg",
-    name: "Solvista",
-    location: "Wagholi near JSPM University, PMRDA",
-    description:
-      "Solvista offers RERA-sanctioned NA bungalow plots in a gated community, surrounded by scenic mountain views and equipped with premium amenities across 2,00,000 sq. ft. of open space.",
-  },
-  {
     photo: "/trine.jpg",
     name: "Citrine City",
     location: "Hadapsar, PMC",
     description:
       "Citrine City stands as a testament to grandeur, occupying a sprawling 5.5 acres, making it one of the largest residential NA gated plots communities in the region.",
+    link: "http://citrinecity.co.in/",
   },
   {
     photo: "/gulmohar_vikas.png",
@@ -49,6 +46,7 @@ const completedProjects: Project[] = [
     location: "Wagholi, PMRDA",
     description:
       "Gulmohar Villa proudly aligns with PMRDA's vision in the development of a stellar Residential & Commercial NA gated plots community.",
+    link: "http://gulmoharvillas.co.in/",
   },
   {
     photo: "/durva.jpg",
@@ -135,11 +133,25 @@ const ProjectShadow: React.FC = () => {
               key={index}
               className="bg-white shadow-lg rounded-lg overflow-hidden"
             >
-              <img
-                src={project.photo}
-                alt={project.name}
-                className="w-full h-56 md:h-72 lg:h-80 object-cover"
-              />
+              {project.link ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={project.photo}
+                    alt={project.name}
+                    className="w-full h-56 md:h-72 lg:h-80 object-cover cursor-pointer hover:opacity-90 transition"
+                  />
+                </a>
+              ) : (
+                <img
+                  src={project.photo}
+                  alt={project.name}
+                  className="w-full h-56 md:h-72 lg:h-80 object-cover"
+                />
+              )}
 
               <div className="p-5">
                 <h3 className="text-xl font-bold mb-2">{project.name}</h3>

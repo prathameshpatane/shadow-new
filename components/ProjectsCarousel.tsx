@@ -4,9 +4,9 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Harvest Hills",
+    title: "Haarvest Hills",
     category: " ",
-    image: "/vest.jpeg",
+    image: "/hills.jpg",
   },
   {
     id: 2,
