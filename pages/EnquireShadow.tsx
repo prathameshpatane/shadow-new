@@ -1,24 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { X } from "lucide-react";
 
-const EnquireShadow: React.FC = () => {
-  const [open, setOpen] = useState(true);
+interface Props {
+  onClose: () => void;
+}
 
-  useEffect(() => {
-    setOpen(true);
-  }, []);
-
-  if (!open) return null;
-
+const EnquireShadow: React.FC<Props> = ({ onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md px-4">
-      
+
       {/* Modal */}
       <div className="relative w-full max-w-md rounded-3xl bg-white shadow-2xl p-8 sm:p-10 animate-in fade-in zoom-in duration-300">
-        
+
         {/* Close Button */}
         <button
-          onClick={() => setOpen(false)}
+          onClick={onClose}
           className="absolute top-5 right-5 rounded-full p-2 text-gray-500 hover:bg-gray-100 hover:text-black transition"
         >
           <X size={20} />
@@ -30,7 +26,7 @@ const EnquireShadow: React.FC = () => {
             Enquiry Form
           </h2>
           <p className="mt-2 text-sm text-gray-500">
-            Fill in your details and we’ll get back to you
+            Fill in your details and we'll get back to you
           </p>
         </div>
 

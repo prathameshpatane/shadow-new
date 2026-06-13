@@ -1,6 +1,5 @@
-
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -22,34 +21,58 @@ import ScrollToTop from './components/ScrollToTop';
 import EnquireShadow from './pages/EnquireShadow';
 
 
-// Home Page
-const HomePage: React.FC<{ scrolled: boolean }> = ({ scrolled }) => (
-  <div className="min-h-screen font-sans selection:bg-pleo-blue selection:text-white">
-    <Navbar scrolled={scrolled} />
-    <main>
-      <Hero />
-      <Why />
-      <About />
-      <Statistics />
-      <Keypoints />
-      <ProjectsCarousel />
-      <GoogleReviews />
-      <Founders />
-      <Testimonials />
-      <EnquiryForm />
-     
-    </main>
-    <Footer />
-  </div>
-);
+// Home Page — scroll-triggered enquiry modal
+const HomePage: React.FC<{ scrolled: boolean }> = ({ scrolled }) => {
+  const [showEnquiry, setShowEnquiry] = useState(false);
+  const hasShown = useRef(false); // ensures modal only auto-opens once per visit
+
+  useEffect(() => {
+    const target = document.getElementById('why-shadow');
+    if (!target) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasShown.current) {
+          hasShown.current = true;
+          setShowEnquiry(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="min-h-screen font-sans selection:bg-pleo-blue selection:text-white">
+      <Navbar scrolled={scrolled} />
+      <main>
+        <Hero />
+        <Why />
+        <About />
+        <Statistics />
+        <Keypoints />
+        <ProjectsCarousel />
+        <GoogleReviews />
+        <Founders />
+        <Testimonials />
+        <EnquiryForm />
+      </main>
+      <Footer />
+
+      {/* Enquiry modal — triggered on scroll to core-qualities section */}
+      {showEnquiry && <EnquireShadow onClose={() => setShowEnquiry(false)} />}
+    </div>
+  );
+};
 
 // About Shadow Page
 const AboutShadowPage: React.FC<{ scrolled: boolean }> = ({ scrolled }) => (
   <div className="min-h-screen font-sans selection:bg-pleo-blue selection:text-white">
     <Navbar scrolled={scrolled} />
     <main className="pt-24">
-    <AboutShadow/>
-      
+      <AboutShadow />
     </main>
     <Footer />
   </div>
@@ -60,7 +83,7 @@ const ProjectsShadowPage: React.FC<{ scrolled: boolean }> = ({ scrolled }) => (
   <div className="min-h-screen font-sans selection:bg-pleo-blue selection:text-white">
     <Navbar scrolled={scrolled} />
     <main className="pt-24">
-      <ProjectShadow/>
+      <ProjectShadow />
     </main>
     <Footer />
   </div>
@@ -71,30 +94,20 @@ const GalleryShadowPage: React.FC<{ scrolled: boolean }> = ({ scrolled }) => (
   <div className="min-h-screen font-sans selection:bg-pleo-blue selection:text-white">
     <Navbar scrolled={scrolled} />
     <main className="pt-24">
-      
-  <GalleryShadow/>
-      <LocationSection/>
-  
-    </main>
-    <Footer />
-  </div>
-);
-const TeamShadowPage: React.FC<{ scrolled: boolean }> = ({ scrolled }) => (
-  <div className="min-h-screen font-sans selection:bg-pleo-blue selection:text-white">
-    <Navbar scrolled={scrolled} />
-    <main className="pt-24">
-    <TeamShadow/>
+      <GalleryShadow />
       <LocationSection />
     </main>
     <Footer />
   </div>
 );
-// Contact Shadow Page
-const ContactShadowPage: React.FC<{ scrolled: boolean }> = ({ scrolled }) => (
+
+// Team Shadow Page
+const TeamShadowPage: React.FC<{ scrolled: boolean }> = ({ scrolled }) => (
   <div className="min-h-screen font-sans selection:bg-pleo-blue selection:text-white">
     <Navbar scrolled={scrolled} />
     <main className="pt-24">
-      <EnquireShadow/>
+      <TeamShadow />
+      <LocationSection />
     </main>
     <Footer />
   </div>
@@ -118,7 +131,8 @@ const AppContent: React.FC = () => {
       <Route path="/projectsshadow" element={<ProjectsShadowPage scrolled={scrolled} />} />
       <Route path="/galleryshadow" element={<GalleryShadowPage scrolled={scrolled} />} />
       <Route path="/teamshadow" element={<TeamShadowPage scrolled={scrolled} />} />
-      <Route path="/enquireshadow" element={<ContactShadowPage scrolled={scrolled} />} />
+      {/* /enquireshadow no longer a standalone page — redirect to home */}
+      <Route path="/enquireshadow" element={<Navigate to="/" replace />} />
     </Routes>
   );
 };
@@ -126,7 +140,7 @@ const AppContent: React.FC = () => {
 const App: React.FC = () => {
   return (
     <Router>
-<ScrollToTop/>
+      <ScrollToTop />
       <AppContent />
     </Router>
   );
